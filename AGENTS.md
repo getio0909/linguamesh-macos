@@ -28,4 +28,3 @@ The repository is documentation-only. It has no dependency setup, formatter, pro
 ## Safety
 
 Never commit credentials, signing identities, provisioning profiles, private keys, translated user content, or sensitive diagnostics. Do not weaken App Sandbox, hardened runtime, TLS, or Keychain protections to make a check pass. Never publish or label a release stable without compatible pinned core and localization versions plus reproducible evidence.
-

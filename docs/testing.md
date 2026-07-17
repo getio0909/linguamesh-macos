@@ -35,4 +35,3 @@ This validates required non-empty files, the pinned goal digest, trailing whites
 | Build | No product build command | Unavailable until an Xcode project exists |
 
 When implementation begins, replace unavailable entries with exact pinned toolchain and scheme commands. Product CI must eventually cover Swift formatting/static analysis, XCTest, XCUITest, strict concurrency, core-wrapper tests, accessibility, sandbox/bookmark behavior, release builds, and packaging smoke tests. Do not record these future checks as passing before they run.
-

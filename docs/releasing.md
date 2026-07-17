@@ -15,4 +15,3 @@ A macOS release may be prepared only after:
 5. signing and notarization run only in protected release infrastructure and produce verifiable evidence.
 
 The intended deliverables are an app bundle and a DMG or another centrally approved native distribution format. Unsigned or unnotarized artifacts must be labeled accurately. Never expose certificates, private keys, passwords, or notarization credentials in source, logs, pull-request workflows, or artifacts. Never promote a prerelease to stable until the central release train records compatible tested versions.
-

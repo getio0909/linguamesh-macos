@@ -17,4 +17,3 @@ The client owns native lifecycle, navigation, accessibility, menus, shortcuts, f
 Credentials must be stored in an application-specific Keychain namespace and supplied only for the requested operation. Persistent user-selected file access must use security-scoped bookmarks or URLs with balanced access lifetimes. Translation content must not enter normal logs or diagnostics. Signing and notarization material must remain outside the repository and outside untrusted CI.
 
 Architectural changes affecting the ABI, protocol, sandbox, persistence ownership, or distribution model require a central compatibility decision before implementation.
-

@@ -20,4 +20,3 @@
 - Cross-repository compatibility and release-train authority; those belong in `linguamesh-project`.
 
 The client must reject an incompatible core ABI or protocol version and must never silently duplicate shared behavior.
-
