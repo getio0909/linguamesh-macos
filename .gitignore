@@ -3,6 +3,9 @@
 .swiftpm/
 DerivedData/
 Packages/
+dist/
+__pycache__/
+*.pyc
 xcuserdata/
 *.xcuserstate
 *.moved-aside

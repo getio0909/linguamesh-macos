@@ -6,7 +6,7 @@ Do not disclose suspected vulnerabilities in a public issue. Use this repository
 
 ## Supported versions
 
-This repository has no released application version. The documentation-only foundation receives maintenance, but there is currently no product binary to classify as supported.
+This repository has no released application version. The prerelease source slice receives maintenance, but there is currently no product binary to classify as supported.
 
 ## Security requirements
 
@@ -16,5 +16,7 @@ This repository has no released application version. The documentation-only foun
 - Treat provider output, source documents, locale data, file paths, and protocol messages as untrusted input.
 - Preserve App Sandbox, hardened runtime, security-scoped access, explicit file ownership, and core compatibility checks.
 - Never provide signing or notarization secrets to untrusted pull-request workflows.
+
+The current core protocol cannot request a stored credential. Keychain persistence is implemented, but authenticated translation remains disabled until a typed one-time secret host-response flow exists and is tested. Do not work around this gap by reading credentials into preferences, command messages, logs, or diagnostics.
 
 Security-sensitive changes require focused tests, threat-model review, and explicit evidence in `IMPLEMENTATION_STATUS.md`.

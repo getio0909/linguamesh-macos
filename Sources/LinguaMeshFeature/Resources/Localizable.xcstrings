@@ -1,0 +1,4320 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "accessibility.source_content": {
+      "comment": "Accessible name for the source text editor.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "النص المطلوب ترجمته"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Text to translate⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Zu übersetzender Text"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text to translate"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŧëẋŧ ŧø ŧŕåñšŀåŧë~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Texto que se va a traducir"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Texte à traduire"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "अनुवाद किया जाने वाला टेक्स्ट"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻訳するテキスト"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "번역할 텍스트"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Texto a traduzir"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Текст для перевода"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "待翻译文本"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "待翻譯文字"
+          }
+        }
+      }
+    },
+    "accessibility.stop_translation": {
+      "comment": "Screen-reader label for stopping an active translation.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "إيقاف الترجمة"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Stop translation⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Übersetzung stoppen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop translation"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Šŧøþ ŧŕåñšŀåŧïøñ~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Detener traducción"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Arrêter la traduction"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "अनुवाद रोकें"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻訳を停止"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "번역 중지"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Parar tradução"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Остановить перевод"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "停止翻译"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "停止翻譯"
+          }
+        }
+      }
+    },
+    "accessibility.translation_output": {
+      "comment": "Accessible name for streamed translated output.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "مخرجات الترجمة المتدفقة"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Streamed translation output⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Gestreamte Übersetzungsausgabe"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Streamed translation output"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Šŧŕëåṁëð ŧŕåñšŀåŧïøñ øûŧþûŧ~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Salida de traducción en streaming"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sortie de traduction en continu"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "स्ट्रीम किया गया अनुवाद आउटपुट"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ストリーミング翻訳の出力"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "스트리밍 번역 출력"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Saída de tradução em fluxo"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Потоковый результат перевода"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "流式翻译输出"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "串流翻譯輸出"
+          }
+        }
+      }
+    },
+    "action.cancel": {
+      "comment": "Action that cancels the active operation.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "إلغاء"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Cancel⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Abbrechen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Çåñçëŀ~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Cancelar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Annuler"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "रद्द करें"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "キャンセル"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "취소"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Cancelar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Отмена"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "取消"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "取消"
+          }
+        }
+      }
+    },
+    "action.close_settings": {
+      "comment": "Action that closes the settings view.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "إغلاق الإعدادات"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Close settings⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Einstellungen schließen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close settings"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Çŀøšë šëŧŧïñĝš~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Cerrar configuración"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Fermer les paramètres"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "सेटिंग बंद करें"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "設定を閉じる"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "설정 닫기"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Fechar configurações"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Закрыть настройки"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "关闭设置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "關閉設定"
+          }
+        }
+      }
+    },
+    "action.save_provider": {
+      "comment": "Action that validates and saves a provider profile.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "حفظ المزوّد"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Save provider⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Anbieter speichern"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save provider"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Šåṽë þŕøṽïðëŕ~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Guardar proveedor"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Enregistrer le fournisseur"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "प्रदाता सहेजें"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "プロバイダーを保存"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "제공업체 저장"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Salvar provedor"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Сохранить поставщика"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "保存提供商"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "儲存供應商"
+          }
+        }
+      }
+    },
+    "action.translate": {
+      "comment": "Primary action that starts a translation.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ترجمة"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Translate⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Übersetzen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Translate"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŧŕåñšŀåŧë~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traducir"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traduire"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "अनुवाद करें"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻訳"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "번역"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traduzir"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Перевести"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻译"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻譯"
+          }
+        }
+      }
+    },
+    "app.title": {
+      "comment": "Application name shown in native shells and About views.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "LinguaMesh"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦LinguaMesh⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "LinguaMesh"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinguaMesh"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［ĿïñĝûåṀëšħ~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "LinguaMesh"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "LinguaMesh"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "LinguaMesh"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "LinguaMesh"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "LinguaMesh"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "LinguaMesh"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "LinguaMesh"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "LinguaMesh"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "LinguaMesh"
+          }
+        }
+      }
+    },
+    "diagnostics.summary": {
+      "comment": "Summary of the loaded core ABI and protocol revisions.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Core ABI %1$lld · البروتوكول %2$lld"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Core ABI %1$lld · Protocol %2$lld⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Core-ABI %1$lld · Protokoll %2$lld"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Core ABI %1$lld · Protocol %2$lld"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Çøŕë ÅƁÏ %1$lld · Þŕøŧøçøŀ %2$lld~~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ABI de Core %1$lld · Protocolo %2$lld"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ABI du Core %1$lld · Protocole %2$lld"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Core ABI %1$lld · प्रोटोकॉल %2$lld"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Core ABI %1$lld · プロトコル %2$lld"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Core ABI %1$lld · 프로토콜 %2$lld"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ABI do Core %1$lld · Protocolo %2$lld"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ABI ядра %1$lld · Протокол %2$lld"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Core ABI %1$lld · 协议 %2$lld"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Core ABI %1$lld · 通訊協定 %2$lld"
+          }
+        }
+      }
+    },
+    "diagnostics.title": {
+      "comment": "Heading for non-sensitive compatibility diagnostics.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "التشخيص"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Diagnostics⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Diagnose"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diagnostics"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ðïåĝñøšŧïçš~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Diagnósticos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Diagnostics"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "निदान"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "診断"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "진단"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Diagnósticos"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Диагностика"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "诊断"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "診斷"
+          }
+        }
+      }
+    },
+    "document.file_count": {
+      "comment": "Number of files selected for a document translation job.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "تم تحديد %1$lld ملفات"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "تم تحديد %1$lld ملفًا"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "تم تحديد ملف واحد (%1$lld)"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "تم تحديد %1$lld ملف"
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "تم تحديد ملفين (%1$lld)"
+                }
+              },
+              "zero": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "لم يتم تحديد أي ملفات (%1$lld)"
+                }
+              }
+            }
+          }
+        },
+        "ar-XB": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦%1$lld files⟧⁩"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦%1$lld files⟧⁩"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦%1$lld file⟧⁩"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦%1$lld files⟧⁩"
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦%1$lld files⟧⁩"
+                }
+              },
+              "zero": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦%1$lld files⟧⁩"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld Datei"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld Dateien"
+                }
+              }
+            }
+          }
+        },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld file"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld files"
+                }
+              }
+            }
+          }
+        },
+        "en-XA": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "［%1$lld ƒïŀë~~~~］"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "［%1$lld ƒïŀëš~~~~］"
+                }
+              }
+            }
+          }
+        },
+        "es": {
+          "variations": {
+            "plural": {
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld archivos"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld archivo"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld archivos"
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld fichiers"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld fichier"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld fichiers"
+                }
+              }
+            }
+          }
+        },
+        "hi": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld फ़ाइल"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld फ़ाइलें"
+                }
+              }
+            }
+          }
+        },
+        "ja": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld 個のファイル"
+                }
+              }
+            }
+          }
+        },
+        "ko": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "파일 %1$lld개"
+                }
+              }
+            }
+          }
+        },
+        "pt-BR": {
+          "variations": {
+            "plural": {
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld arquivos"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld arquivo"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld arquivos"
+                }
+              }
+            }
+          }
+        },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld файла"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld файлов"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld файл"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld файла"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "已选择 %1$lld 个文件"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hant": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "已選取 %1$lld 個檔案"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "error.authentication": {
+      "comment": "Authentication guidance that does not expose credential content.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "تحقق من بيانات اعتماد المزوّد وحاول مرة أخرى."
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Check the provider credential and try again.⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Überprüfen Sie die Anbieter-Anmeldedaten und versuchen Sie es erneut."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the provider credential and try again."
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Çħëçķ ŧħë þŕøṽïðëŕ çŕëðëñŧïåŀ åñð ŧŕÿ åĝåïñ.~~~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Comprueba la credencial del proveedor e inténtalo de nuevo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Vérifiez l’identifiant du fournisseur et réessayez."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "प्रदाता क्रेडेंशियल जाँचें और फिर से प्रयास करें।"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "プロバイダーの認証情報を確認して、もう一度お試しください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "제공업체 자격 증명을 확인하고 다시 시도하세요."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Verifique a credencial do provedor e tente novamente."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Проверьте учётные данные поставщика и повторите попытку."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "请检查提供商凭据，然后重试。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "請檢查供應商憑證，然後再試一次。"
+          }
+        }
+      }
+    },
+    "error.authentication_failed": {
+      "comment": "Authentication error that names the affected provider without exposing credentials.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "تحقق من بيانات اعتماد %1$@ وحاول مرة أخرى."
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Check the credentials for %1$@ and try again.⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Prüfen Sie die Anmeldedaten für %1$@ und versuchen Sie es erneut."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the credentials for %1$@ and try again."
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Çħëçķ ŧħë çŕëðëñŧïåŀš ƒøŕ %1$@ åñð ŧŕÿ åĝåïñ.~~~~~~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Comprueba las credenciales de %1$@ e inténtalo de nuevo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Vérifiez les identifiants de %1$@, puis réessayez."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ के क्रेडेंशियल जाँचें और फिर से कोशिश करें।"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ の認証情報を確認して、もう一度お試しください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@의 자격 증명을 확인하고 다시 시도하세요."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Verifique as credenciais de %1$@ e tente novamente."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Проверьте учетные данные для %1$@ и повторите попытку."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "请检查 %1$@ 的凭据，然后重试。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "請檢查 %1$@ 的憑證，然後再試一次。"
+          }
+        }
+      }
+    },
+    "error.incompatible_core": {
+      "comment": "Error shown when the native core contract is incompatible.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "يتطلب هذا التطبيق مكتبة LinguaMesh Core متوافقة."
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦This app requires a compatible LinguaMesh Core library.⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Diese App benötigt eine kompatible LinguaMesh-Core-Bibliothek."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This app requires a compatible LinguaMesh Core library."
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŧħïš åþþ ŕëǫûïŕëš å çøṁþåŧïƀŀë ĿïñĝûåṀëšħ Çøŕë ŀïƀŕåŕÿ.~~~~~~~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Esta aplicación requiere una biblioteca LinguaMesh Core compatible."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Cette application nécessite une bibliothèque LinguaMesh Core compatible."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "इस ऐप के लिए संगत LinguaMesh Core लाइब्रेरी आवश्यक है।"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "このアプリには互換性のある LinguaMesh Core ライブラリが必要です。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "이 앱에는 호환되는 LinguaMesh Core 라이브러리가 필요합니다."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Este aplicativo requer uma biblioteca LinguaMesh Core compatível."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Для этого приложения требуется совместимая библиотека LinguaMesh Core."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "此应用需要兼容的 LinguaMesh Core 库。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "此應用程式需要相容的 LinguaMesh Core 程式庫。"
+          }
+        }
+      }
+    },
+    "error.invalid_profile": {
+      "comment": "Validation error for an incomplete provider profile.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "أدخل اسم المزوّد ونقطة النهاية والنموذج."
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Enter a provider name, endpoint, and model.⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Geben Sie Anbietername, Endpunkt und Modell ein."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter a provider name, endpoint, and model."
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ëñŧëŕ å þŕøṽïðëŕ ñåṁë, ëñðþøïñŧ, åñð ṁøðëŀ.~~~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Introduce un nombre de proveedor, un punto de conexión y un modelo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Saisissez un nom de fournisseur, un point de terminaison et un modèle."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "प्रदाता का नाम, एंडपॉइंट और मॉडल दर्ज करें।"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "プロバイダー名、エンドポイント、モデルを入力してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "제공업체 이름, 엔드포인트, 모델을 입력하세요."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Informe o nome do provedor, o endpoint e o modelo."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Укажите название поставщика, конечную точку и модель."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "请输入提供商名称、端点和模型。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "請輸入供應商名稱、端點和模型。"
+          }
+        }
+      }
+    },
+    "error.network_unavailable": {
+      "comment": "Actionable error shown when a remote provider cannot be reached.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "تحقق من اتصال الشبكة وحاول مرة أخرى."
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Check your network connection and try again.⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Prüfen Sie die Netzwerkverbindung und versuchen Sie es erneut."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check your network connection and try again."
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Çħëçķ ÿøûŕ ñëŧŵøŕķ çøññëçŧïøñ åñð ŧŕÿ åĝåïñ.~~~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Comprueba la conexión de red e inténtalo de nuevo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Vérifiez votre connexion réseau, puis réessayez."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "अपना नेटवर्क कनेक्शन जाँचें और फिर से कोशिश करें।"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ネットワーク接続を確認して、もう一度お試しください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "네트워크 연결을 확인하고 다시 시도하세요."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Verifique sua conexão de rede e tente novamente."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Проверьте подключение к сети и повторите попытку."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "请检查网络连接，然后重试。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "請檢查網路連線，然後再試一次。"
+          }
+        }
+      }
+    },
+    "error.rate_limited": {
+      "comment": "Retry guidance after a provider rate limit.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "أعد المحاولة بعد %1$lld ثوانٍ."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "أعد المحاولة بعد %1$lld ثانية."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "أعد المحاولة بعد ثانية واحدة (%1$lld)."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "أعد المحاولة بعد %1$lld ثانية."
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "أعد المحاولة بعد ثانيتين (%1$lld)."
+                }
+              },
+              "zero": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "أعد المحاولة الآن (%1$lld ثانية)."
+                }
+              }
+            }
+          }
+        },
+        "ar-XB": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦Try again in %1$lld seconds.⟧⁩"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦Try again in %1$lld seconds.⟧⁩"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦Try again in %1$lld second.⟧⁩"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦Try again in %1$lld seconds.⟧⁩"
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦Try again in %1$lld seconds.⟧⁩"
+                }
+              },
+              "zero": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "⁧⟦Try again in %1$lld seconds.⟧⁩"
+                }
+              }
+            }
+          }
+        },
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Versuchen Sie es in %1$lld Sekunde erneut."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Versuchen Sie es in %1$lld Sekunden erneut."
+                }
+              }
+            }
+          }
+        },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Try again in %1$lld second."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Try again in %1$lld seconds."
+                }
+              }
+            }
+          }
+        },
+        "en-XA": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "［Ŧŕÿ åĝåïñ ïñ %1$lld šëçøñð.~~~~~~~~~~］"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "［Ŧŕÿ åĝåïñ ïñ %1$lld šëçøñðš.~~~~~~~~~~］"
+                }
+              }
+            }
+          }
+        },
+        "es": {
+          "variations": {
+            "plural": {
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Inténtalo de nuevo en %1$lld segundos."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Inténtalo de nuevo en %1$lld segundo."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Inténtalo de nuevo en %1$lld segundos."
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Réessayez dans %1$lld secondes."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Réessayez dans %1$lld seconde."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Réessayez dans %1$lld secondes."
+                }
+              }
+            }
+          }
+        },
+        "hi": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld सेकंड बाद फिर से कोशिश करें।"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld सेकंड बाद फिर से कोशिश करें।"
+                }
+              }
+            }
+          }
+        },
+        "ja": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld 秒後にもう一度お試しください。"
+                }
+              }
+            }
+          }
+        },
+        "ko": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "%1$lld초 후에 다시 시도하세요."
+                }
+              }
+            }
+          }
+        },
+        "pt-BR": {
+          "variations": {
+            "plural": {
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Tente novamente em %1$lld segundos."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Tente novamente em %1$lld segundo."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Tente novamente em %1$lld segundos."
+                }
+              }
+            }
+          }
+        },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Повторите попытку через %1$lld секунды."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Повторите попытку через %1$lld секунд."
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Повторите попытку через %1$lld секунду."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "Повторите попытку через %1$lld секунды."
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "请在 %1$lld 秒后重试。"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hant": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "new",
+                  "value": "請在 %1$lld 秒後再試一次。"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "error.unknown": {
+      "comment": "Fallback translation error with actionable diagnostic guidance.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "فشلت الترجمة. راجع معلومات التشخيص وحاول مرة أخرى."
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Translation failed. Review diagnostics and try again.⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Übersetzung fehlgeschlagen. Prüfen Sie die Diagnose und versuchen Sie es erneut."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Translation failed. Review diagnostics and try again."
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŧŕåñšŀåŧïøñ ƒåïŀëð. Ŕëṽïëŵ ðïåĝñøšŧïçš åñð ŧŕÿ åĝåïñ.~~~~~~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "La traducción falló. Revisa los diagnósticos e inténtalo de nuevo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "La traduction a échoué. Consultez les diagnostics et réessayez."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "अनुवाद विफल रहा। निदान की समीक्षा करें और फिर से प्रयास करें।"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻訳に失敗しました。診断情報を確認して、もう一度お試しください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "번역에 실패했습니다. 진단을 검토하고 다시 시도하세요."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "A tradução falhou. Revise os diagnósticos e tente novamente."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Не удалось выполнить перевод. Просмотрите диагностику и повторите попытку."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻译失败。请查看诊断信息并重试。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻譯失敗。請檢視診斷資訊後再試一次。"
+          }
+        }
+      }
+    },
+    "field.api_key": {
+      "comment": "Label for the optional provider API key field.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "مفتاح API (اختياري للمزوّدين المحليين)"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦API key (optional for local providers)⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "API-Schlüssel (optional für lokale Anbieter)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API key (optional for local providers)"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［ÅÞÏ ķëÿ (øþŧïøñåŀ ƒøŕ ŀøçåŀ þŕøṽïðëŕš)~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Clave de API (opcional para proveedores locales)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Clé API (facultative pour les fournisseurs locaux)"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "API कुंजी (स्थानीय प्रदाताओं के लिए वैकल्पिक)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "API キー（ローカルプロバイダーでは省略可）"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "API 키(로컬 제공업체에서는 선택 사항)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Chave de API (opcional para provedores locais)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Ключ API (необязательно для локальных поставщиков)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "API 密钥（本地提供商可选）"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "API 金鑰（本機供應商可選）"
+          }
+        }
+      }
+    },
+    "field.endpoint": {
+      "comment": "Label for the provider endpoint field.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "نقطة النهاية"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Endpoint⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Endpunkt"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Endpoint"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ëñðþøïñŧ~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Punto de conexión"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Point de terminaison"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "एंडपॉइंट"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "エンドポイント"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "엔드포인트"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Endpoint"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Конечная точка"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "端点"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "端點"
+          }
+        }
+      }
+    },
+    "field.model": {
+      "comment": "Label for the provider model field.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "النموذج"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Model⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Modell"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Model"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ṁøðëŀ~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Modelo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Modèle"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "मॉडल"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "モデル"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "모델"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Modelo"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Модель"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "模型"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "模型"
+          }
+        }
+      }
+    },
+    "field.source_text": {
+      "comment": "Label for the source text input field.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "النص المصدر"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Source text⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Quelltext"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Source text"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Šøûŕçë ŧëẋŧ~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Texto de origen"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Texte source"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "स्रोत टेक्स्ट"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "原文"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "원문"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Texto de origem"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Исходный текст"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "源文本"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "來源文字"
+          }
+        }
+      }
+    },
+    "field.translation": {
+      "comment": "Heading for translated output.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "الترجمة"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Translation⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Übersetzung"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Translation"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŧŕåñšŀåŧïøñ~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traducción"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traduction"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "अनुवाद"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻訳"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "번역"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tradução"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Перевод"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "译文"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "譯文"
+          }
+        }
+      }
+    },
+    "history.mode.disabled": {
+      "comment": "Explains the selected history persistence mode.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "السجل معطّل"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦History is disabled⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Der Verlauf ist deaktiviert"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "History is disabled"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ħïšŧøŕÿ ïš ðïšåƀŀëð~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "El historial está desactivado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "L’historique est désactivé"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "इतिहास बंद है"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "履歴は無効です"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "기록이 비활성화되었습니다"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "O histórico está desativado"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "История отключена"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "历史记录已禁用"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "歷史記錄已停用"
+          }
+        }
+      }
+    },
+    "history.mode.enabled": {
+      "comment": "Explains the selected history persistence mode.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "يُحفظ السجل على هذا الجهاز"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦History is saved on this device⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Der Verlauf wird auf diesem Gerät gespeichert"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "History is saved on this device"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ħïšŧøŕÿ ïš šåṽëð øñ ŧħïš ðëṽïçë~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "El historial se guarda en este dispositivo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "L’historique est enregistré sur cet appareil"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "इतिहास इस डिवाइस पर सहेजा जाता है"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "履歴はこのデバイスに保存されます"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "기록이 이 기기에 저장됩니다"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "O histórico é salvo neste dispositivo"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "История сохраняется на этом устройстве"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "历史记录保存在此设备上"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "歷史記錄儲存在此裝置上"
+          }
+        }
+      }
+    },
+    "history.mode.incognito": {
+      "comment": "Explains the selected history persistence mode.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "لا يحفظ وضع التصفح الخفي هذه الترجمة"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Incognito mode does not save this translation⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Im Inkognitomodus wird diese Übersetzung nicht gespeichert"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Incognito mode does not save this translation"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ïñçøĝñïŧø ṁøðë ðøëš ñøŧ šåṽë ŧħïš ŧŕåñšŀåŧïøñ~~~~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "El modo incógnito no guarda esta traducción"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Le mode navigation privée n’enregistre pas cette traduction"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "गुप्त मोड इस अनुवाद को नहीं सहेजता"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "シークレットモードではこの翻訳は保存されません"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "시크릿 모드에서는 이 번역을 저장하지 않습니다"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "O modo anônimo não salva esta tradução"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "В режиме инкогнито этот перевод не сохраняется"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "无痕模式不会保存此翻译"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "無痕模式不會儲存此翻譯"
+          }
+        }
+      }
+    },
+    "locale.current": {
+      "comment": "Names the active interface language in Settings.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "لغة الواجهة: %1$@"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Interface language: %1$@⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Oberflächensprache: %1$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Interface language: %1$@"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ïñŧëŕƒåçë ŀåñĝûåĝë: %1$@~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Idioma de la interfaz: %1$@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Langue de l’interface : %1$@"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "इंटरफ़ेस भाषा: %1$@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "インターフェイスの言語：%1$@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "인터페이스 언어: %1$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Idioma da interface: %1$@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Язык интерфейса: %1$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "界面语言：%1$@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "介面語言：%1$@"
+          }
+        }
+      }
+    },
+    "nav.text_translation": {
+      "comment": "Navigation label for the text translation workspace.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ترجمة النص"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Text translation⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Textübersetzung"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text translation"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŧëẋŧ ŧŕåñšŀåŧïøñ~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traducción de texto"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traduction de texte"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "पाठ अनुवाद"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "テキスト翻訳"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "텍스트 번역"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tradução de texto"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Перевод текста"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "文本翻译"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "文字翻譯"
+          }
+        }
+      }
+    },
+    "onboarding.description": {
+      "comment": "Privacy explanation shown during initial provider setup.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "يُرسل محتواك مباشرةً إلى المزوّد الذي تضبطه. لا يتضمن LinguaMesh أي مفتاح API."
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Your content goes directly to the provider you configure. LinguaMesh never bundles an API key.⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Ihre Inhalte werden direkt an den konfigurierten Anbieter gesendet. LinguaMesh enthält niemals einen API-Schlüssel."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your content goes directly to the provider you configure. LinguaMesh never bundles an API key."
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ÿøûŕ çøñŧëñŧ ĝøëš ðïŕëçŧŀÿ ŧø ŧħë þŕøṽïðëŕ ÿøû çøñƒïĝûŕë. ĿïñĝûåṀëšħ ñëṽëŕ ƀûñðŀëš åñ ÅÞÏ ķëÿ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tu contenido se envía directamente al proveedor que configures. LinguaMesh nunca incluye una clave de API."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Votre contenu est envoyé directement au fournisseur que vous configurez. LinguaMesh n’intègre jamais de clé API."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "आपकी सामग्री सीधे आपके कॉन्फ़िगर किए गए प्रदाता के पास जाती है। LinguaMesh में कोई API कुंजी शामिल नहीं होती।"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "コンテンツは設定したプロバイダーに直接送信されます。LinguaMesh に API キーは組み込まれていません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "콘텐츠는 설정한 제공업체로 직접 전송됩니다. LinguaMesh에는 API 키가 포함되어 있지 않습니다."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Seu conteúdo vai diretamente para o provedor configurado. O LinguaMesh nunca inclui uma chave de API."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Ваш контент отправляется напрямую настроенному поставщику. LinguaMesh не содержит встроенных ключей API."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "你的内容会直接发送给你配置的服务提供商。LinguaMesh 不内置任何 API 密钥。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "你的內容會直接傳送給你設定的服務供應商。LinguaMesh 不內建任何 API 金鑰。"
+          }
+        }
+      }
+    },
+    "onboarding.title": {
+      "comment": "Heading for the initial provider setup screen.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "الاتصال بمزوّد ترجمة"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Connect a translation provider⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Übersetzungsanbieter verbinden"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connect a translation provider"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Çøññëçŧ å ŧŕåñšŀåŧïøñ þŕøṽïðëŕ~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Conectar un proveedor de traducción"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connecter un fournisseur de traduction"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "अनुवाद प्रदाता से कनेक्ट करें"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻訳プロバイダーに接続"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "번역 제공업체 연결"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Conectar um provedor de tradução"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Подключить поставщика перевода"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "连接翻译服务提供商"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "連接翻譯服務供應商"
+          }
+        }
+      }
+    },
+    "provider.active": {
+      "comment": "Identifies the provider that will receive the next request.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "المزوّد النشط: %1$@"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Active provider: %1$@⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Aktiver Anbieter: %1$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Active provider: %1$@"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Åçŧïṽë þŕøṽïðëŕ: %1$@~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Proveedor activo: %1$@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Fournisseur actif : %1$@"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "सक्रिय प्रदाता: %1$@"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "使用中のプロバイダー：%1$@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "활성 제공업체: %1$@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Provedor ativo: %1$@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Активный провайдер: %1$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "当前提供商：%1$@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "目前提供者：%1$@"
+          }
+        }
+      }
+    },
+    "provider.name": {
+      "comment": "Label for the provider profile name field.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "اسم المزوّد"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Provider name⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Anbietername"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Provider name"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Þŕøṽïðëŕ ñåṁë~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Nombre del proveedor"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Nom du fournisseur"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "प्रदाता का नाम"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "プロバイダー名"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "제공업체 이름"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Nome do provedor"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Название поставщика"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "提供商名称"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "供應商名稱"
+          }
+        }
+      }
+    },
+    "settings.target_language": {
+      "comment": "Label for the translation target language selector.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "اللغة الهدف"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Target language⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Zielsprache"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Target language"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŧåŕĝëŧ ŀåñĝûåĝë~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Idioma de destino"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Langue cible"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "लक्ष्य भाषा"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻訳先の言語"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "대상 언어"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Idioma de destino"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Целевой язык"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "目标语言"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "目標語言"
+          }
+        }
+      }
+    },
+    "settings.theme": {
+      "comment": "Heading for the interface theme preference.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "السمة"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Theme⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Design"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Theme"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŧħëṁë~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tema"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Thème"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "थीम"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "テーマ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "테마"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tema"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Тема"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "主题"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "主題"
+          }
+        }
+      }
+    },
+    "settings.title": {
+      "comment": "Heading and navigation label for application settings.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "الإعدادات"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Settings⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Einstellungen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Šëŧŧïñĝš~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Configuración"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Paramètres"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "सेटिंग"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "設定"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "설정"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Configurações"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Настройки"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "设置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "設定"
+          }
+        }
+      }
+    },
+    "settings.ui_language": {
+      "comment": "Heading for the interface language preference.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "لغة الواجهة"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Interface language⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Oberflächensprache"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Interface language"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ïñŧëŕƒåçë ŀåñĝûåĝë~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Idioma de la interfaz"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Langue de l’interface"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "इंटरफ़ेस की भाषा"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "インターフェースの言語"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "인터페이스 언어"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Idioma da interface"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Язык интерфейса"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "界面语言"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "介面語言"
+          }
+        }
+      }
+    },
+    "status.cancelled": {
+      "comment": "Status shown after cancellation when partial output remains available.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "أُلغيت الترجمة. تم الاحتفاظ بالمخرجات الجزئية."
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Translation cancelled. Partial output was kept.⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Übersetzung abgebrochen. Die Teilausgabe wurde beibehalten."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Translation cancelled. Partial output was kept."
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŧŕåñšŀåŧïøñ çåñçëŀŀëð. Þåŕŧïåŀ øûŧþûŧ ŵåš ķëþŧ.~~~~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traducción cancelada. Se conservó la salida parcial."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traduction annulée. La sortie partielle a été conservée."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "अनुवाद रद्द किया गया। आंशिक आउटपुट रखा गया।"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻訳をキャンセルしました。途中までの出力は保持されています。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "번역이 취소되었습니다. 부분 출력은 유지되었습니다."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Tradução cancelada. A saída parcial foi mantida."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Перевод отменён. Частичный результат сохранён."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻译已取消。已保留部分输出。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻譯已取消。已保留部分輸出。"
+          }
+        }
+      }
+    },
+    "status.ready": {
+      "comment": "Status shown when the translator is ready for input.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "جاهز"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Ready⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bereit"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ready"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŕëåðÿ~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Listo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Prêt"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "तैयार"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "準備完了"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "준비됨"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Pronto"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Готово"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "就绪"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "就緒"
+          }
+        }
+      }
+    },
+    "status.translating": {
+      "comment": "Status shown while translated output is streaming.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "جارٍ الترجمة…"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Translating…⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Übersetzung läuft…"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Translating…"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŧŕåñšŀåŧïñĝ…~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traduciendo…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traduction en cours…"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "अनुवाद हो रहा है…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "翻訳中…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "번역 중…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Traduzindo…"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Выполняется перевод…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "正在翻译…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "正在翻譯…"
+          }
+        }
+      }
+    },
+    "theme.dark": {
+      "comment": "Theme option for the dark color scheme.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "داكن"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Dark⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Dunkel"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dark"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ðåŕķ~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Oscuro"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sombre"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "गहरी"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ダーク"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "다크"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Escuro"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Тёмная"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "深色"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "深色"
+          }
+        }
+      }
+    },
+    "theme.light": {
+      "comment": "Theme option for the light color scheme.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "فاتح"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦Light⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Hell"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Ŀïĝħŧ~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Claro"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Clair"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "हल्की"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "ライト"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "라이트"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Claro"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Светлая"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "浅色"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "淺色"
+          }
+        }
+      }
+    },
+    "theme.system": {
+      "comment": "Theme option that follows the operating system setting.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "النظام"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦System⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "System"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "System"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［Šÿšŧëṁ~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sistema"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Système"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "सिस्टम"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "システム"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "시스템"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sistema"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Системная"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "跟随系统"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "跟隨系統"
+          }
+        }
+      }
+    },
+    "translation.progress": {
+      "comment": "Progress summary for translated document segments.",
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "new",
+            "value": "تمت ترجمة %1$lld من %2$lld مقاطع"
+          }
+        },
+        "ar-XB": {
+          "stringUnit": {
+            "state": "new",
+            "value": "⁧⟦%1$lld of %2$lld segments translated⟧⁩"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld von %2$lld Segmenten übersetzt"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld of %2$lld segments translated"
+          }
+        },
+        "en-XA": {
+          "stringUnit": {
+            "state": "new",
+            "value": "［%1$lld øƒ %2$lld šëĝṁëñŧš ŧŕåñšŀåŧëð~~~~~~~~~~~~~~］"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld de %2$lld segmentos traducidos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld segments traduits sur %2$lld"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%2$lld में से %1$lld खंडों का अनुवाद हुआ"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%2$lld 件中 %1$lld 件のセグメントを翻訳済み"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "세그먼트 %2$lld개 중 %1$lld개 번역됨"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld de %2$lld segmentos traduzidos"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Переведено сегментов: %1$lld из %2$lld"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "已翻译 %1$lld/%2$lld 个片段"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "new",
+            "value": "已翻譯 %1$lld/%2$lld 個片段"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

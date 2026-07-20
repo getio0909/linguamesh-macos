@@ -1,0 +1,97 @@
+name: macOS Native Client
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: macos-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  native:
+    runs-on: macos-15
+    timeout-minutes: 35
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - name: Check out macOS client
+        # 固定 actions/checkout v7.0.0。
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          persist-credentials: false
+          path: linguamesh-macos
+      - name: Check out project specification
+        # 固定 actions/checkout v7.0.0。
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: ${{ github.repository_owner }}/linguamesh-project
+          ref: b75d4d1df2adbb3729db9425f7b999f62673e22c
+          persist-credentials: false
+          path: linguamesh-project
+      - name: Check out core
+        # 固定 actions/checkout v7.0.0。
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: ${{ github.repository_owner }}/linguamesh-core
+          ref: 115535c76d804020f045708867af7798b8d0294a
+          persist-credentials: false
+          path: linguamesh-core
+      - name: Check out localization source
+        # 固定 actions/checkout v7.0.0。
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: ${{ github.repository_owner }}/linguamesh-l10n
+          ref: 7e8c987737444d4e0f8f2642b108eee4c7801f58
+          persist-credentials: false
+          path: linguamesh-l10n
+      - name: Install pinned Rust toolchain
+        # 固定 dtolnay/rust-toolchain 1.93.0 分支提交。
+        uses: dtolnay/rust-toolchain@d0befba8b9ddf874327619e84c39b094edd58b66
+      - name: Record Apple toolchains
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          swift --version
+      - name: Install source-check tools
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: "1"
+        run: brew install ripgrep
+      - name: Build LinguaMesh Core XCFramework
+        working-directory: linguamesh-core
+        run: bash tools/build-apple-sdk.sh
+      - name: Test generated Swift wrapper
+        working-directory: linguamesh-core
+        run: swift test --package-path bindings/apple
+      - name: Validate source and localization
+        working-directory: linguamesh-macos
+        run: bash tools/check-source.sh
+      - name: Build with strict concurrency
+        working-directory: linguamesh-macos
+        run: >-
+          swift build --configuration debug
+          -Xswiftc -warnings-as-errors
+          -Xswiftc -strict-concurrency=complete
+      - name: Run unit and integration tests
+        working-directory: linguamesh-macos
+        run: >-
+          swift test --configuration debug --parallel
+          -Xswiftc -warnings-as-errors
+          -Xswiftc -strict-concurrency=complete
+      - name: Assemble app bundle
+        working-directory: linguamesh-macos
+        run: bash tools/package-app.sh
+      - name: Ad-hoc sign packaging smoke test
+        working-directory: linguamesh-macos
+        run: |
+          set -euo pipefail
+          codesign --force --deep --sign - --options runtime \
+            --entitlements Packaging/LinguaMesh.entitlements \
+            dist/LinguaMesh.app
+          codesign --verify --deep --strict dist/LinguaMesh.app
+          plutil -lint dist/LinguaMesh.app/Contents/Info.plist
