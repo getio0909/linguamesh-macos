@@ -99,7 +99,7 @@ final class NativeCoreIntegrationTests: XCTestCase {
         try await core.shutdown()
     }
 
-    func testConsumerCancellationAllowsImmediateNextTranslation() async throws {
+    func testCancellationAllowsImmediateNextTranslation() async throws {
         let provider = try FakeProviderProcess.start()
         defer { provider.stop() }
         let core = try NativeCoreClient()
@@ -120,7 +120,7 @@ final class NativeCoreIntegrationTests: XCTestCase {
             }
         }
         await fulfillment(of: [started], timeout: 3)
-        consumer.cancel()
+        try await core.cancel()
         _ = await consumer.result
 
         let secondEvents = try await core.translate(
