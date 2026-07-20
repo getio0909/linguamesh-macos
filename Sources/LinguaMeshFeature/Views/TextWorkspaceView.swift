@@ -35,7 +35,7 @@ public struct TextWorkspaceView: View {
                     "BCP 47 tag",
                     text: Binding(
                         get: { model.state.targetLocale },
-                        set: model.setTargetLocale
+                        set: { value in model.setTargetLocale(value) }
                     )
                 )
                 .frame(width: 120)
@@ -46,7 +46,7 @@ public struct TextWorkspaceView: View {
                     NativeTextEditor(
                         text: Binding(
                             get: { model.state.sourceText },
-                            set: model.setSourceText
+                            set: { value in model.setSourceText(value) }
                         ),
                         isEditable: !model.state.phase.isActive,
                         accessibilityLabel: model.localized(
