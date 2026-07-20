@@ -24,12 +24,16 @@ public struct PreferencesView: View {
             Picker(
                 model.localized("settings.ui_language", fallback: "Interface language"),
                 selection: Binding(
-                    get: { model.state.uiLocale },
-                    set: { value in model.setLocale(value) }
+                    get: { model.state.uiLocale.rawValue },
+                    set: { value in
+                        if let locale = UILocale(rawValue: value) {
+                            model.setLocale(locale)
+                        }
+                    }
                 )
             ) {
-                ForEach(UILocale.allCases, id: \.self) { locale in
-                    Text(locale.displayName).tag(locale)
+                ForEach(UILocale.allCases, id: \.rawValue) { locale in
+                    Text(locale.displayName).tag(locale.rawValue)
                 }
             }
             Text(
