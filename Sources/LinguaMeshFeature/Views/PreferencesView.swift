@@ -28,7 +28,7 @@ public struct PreferencesView: View {
                     set: model.setLocale
                 )
             ) {
-                ForEach(UILocale.allCases) { locale in
+                ForEach(UILocale.allCases, id: \.self) { locale in
                     Text(locale.displayName).tag(locale)
                 }
             }

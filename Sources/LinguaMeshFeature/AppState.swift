@@ -8,7 +8,7 @@ public enum ThemePreference: String, CaseIterable, Hashable, Identifiable, Senda
     public var id: String { rawValue }
 }
 
-public enum UILocale: String, CaseIterable, Hashable, Identifiable, Sendable {
+public enum UILocale: String, CaseIterable, Hashable, Sendable {
     case english = "en"
     case simplifiedChinese = "zh-Hans"
     case traditionalChinese = "zh-Hant"
@@ -23,8 +23,6 @@ public enum UILocale: String, CaseIterable, Hashable, Identifiable, Sendable {
     case hindi = "hi"
     case accentedPseudo = "en-XA"
     case bidirectionalPseudo = "ar-XB"
-
-    public var id: String { rawValue }
 
     public var locale: Locale { Locale(identifier: rawValue) }
 
