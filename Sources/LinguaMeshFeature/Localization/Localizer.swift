@@ -7,11 +7,12 @@ struct Localizer {
         locale: UILocale,
         arguments: [String] = []
     ) -> String {
-        var localized = localizedBundle(for: locale).localizedString(
-            forKey: key,
-            value: fallback,
-            table: "Localizable"
-        )
+        var localized = catalogText(key: key, locale: locale)
+            ?? localizedBundle(for: locale).localizedString(
+                forKey: key,
+                value: fallback,
+                table: "Localizable"
+            )
         for (offset, argument) in arguments.enumerated() {
             localized = localized.replacingOccurrences(
                 of: "%\(offset + 1)$@",
@@ -133,6 +134,21 @@ struct Localizer {
         return bundle
     }
 
+    private func catalogText(key: String, locale: UILocale) -> String? {
+        guard let url = Bundle.module.url(
+            forResource: "Localizable",
+            withExtension: "xcstrings"
+        ),
+              let data = try? Data(contentsOf: url),
+              let catalog = try? JSONDecoder().decode(StringCatalog.self, from: data),
+              let entry = catalog.strings[key]
+        else {
+            return nil
+        }
+        return entry.localizations?[locale.rawValue]?.stringUnit?.value
+            ?? entry.localizations?[UILocale.english.rawValue]?.stringUnit?.value
+    }
+
     private func packagedResourceBundle() -> Bundle? {
         Bundle.main.urls(forResourcesWithExtension: "bundle", subdirectory: nil)?
             .lazy
@@ -141,4 +157,20 @@ struct Localizer {
                 bundle.bundleURL.lastPathComponent.contains("LinguaMeshFeature")
             }
     }
+}
+
+private struct StringCatalog: Decodable {
+    let strings: [String: StringCatalogEntry]
+}
+
+private struct StringCatalogEntry: Decodable {
+    let localizations: [String: StringCatalogLocalization]?
+}
+
+private struct StringCatalogLocalization: Decodable {
+    let stringUnit: StringCatalogStringUnit?
+}
+
+private struct StringCatalogStringUnit: Decodable {
+    let value: String
 }

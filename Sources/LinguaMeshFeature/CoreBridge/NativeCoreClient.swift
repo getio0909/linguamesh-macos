@@ -156,6 +156,21 @@ public actor NativeCoreClient: CoreClient {
             var previousSequence: UInt64?
             do {
                 while !Task.isCancelled {
+                    if terminationSignal.isTerminated() {
+                        try? session.cancel()
+                        _ = Self.drainOperation(
+                            session: session,
+                            operationIdentifier: operationIdentifier,
+                            correlationIdentifier: correlationIdentifier
+                        )
+                        await self?.operationFinished(
+                            operationIdentifier,
+                            session: session,
+                            recreateSession: true
+                        )
+                        continuation.finish()
+                        return
+                    }
                     let data = try session.pollEvent(timeoutMilliseconds: 100)
                     if data.isEmpty {
                         continue
@@ -248,7 +263,6 @@ public actor NativeCoreClient: CoreClient {
         continuation.onTermination = { @Sendable termination in
             if case .cancelled = termination {
                 terminationSignal.markTerminated()
-                worker.cancel()
                 try? session.cancel()
             }
         }
