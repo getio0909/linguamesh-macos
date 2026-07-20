@@ -14,7 +14,7 @@ public struct PreferencesView: View {
                 model.localized("settings.theme", fallback: "Theme"),
                 selection: Binding(
                     get: { model.state.theme },
-                    set: model.setTheme
+                    set: { value in model.setTheme(value) }
                 )
             ) {
                 Text(model.localized("theme.system", fallback: "System")).tag(ThemePreference.system)
@@ -25,7 +25,7 @@ public struct PreferencesView: View {
                 model.localized("settings.ui_language", fallback: "Interface language"),
                 selection: Binding(
                     get: { model.state.uiLocale },
-                    set: model.setLocale
+                    set: { value in model.setLocale(value) }
                 )
             ) {
                 ForEach(UILocale.allCases, id: \.self) { locale in
