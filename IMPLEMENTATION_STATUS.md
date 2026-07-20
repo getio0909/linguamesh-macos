@@ -1,6 +1,6 @@
 # Implementation Status
 
-Status: Milestone 3 partial checkpoint; source implemented, macOS verification pending
+Status: Milestone 3 partial checkpoint; source and macOS CI verified, release pending
 
 Global goal SHA-256: `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903e36198`
 
@@ -20,7 +20,7 @@ Global goal SHA-256: `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903
 ## Explicitly not verified or not implemented
 
 - No host-installed Swift compiler, Xcode, `xcodebuild`, Apple SDK, or macOS runtime exists on this Debian host. The real package, XCTest targets, XCFramework linkage, app launch, Keychain behavior under the signed app, App Sandbox, entitlements, and package script have not been built or run locally.
-- The macOS GitHub Actions workflow has been authored but has not yet produced a successful run for this checkpoint. Source-level tests are not recorded as passing until that runner completes.
+- macOS Native workflow run `29764929139` passed source validation, Core XCFramework build, generated Swift wrapper tests, strict-concurrency client build, all unit/integration tests (including immediate reuse after cancellation), app bundle assembly, and ad-hoc signing smoke verification on macOS 15/Xcode 16.4.
 - The workflow pins reviewed core ABI 1 source revision `0db51464a9359400a2754ee86b51be2709e73709`; it never consumes moving `main`. The pinned Core also keeps text that fits one chunk intact, preventing duplicate provider requests for short whitespace-containing input.
 - Core protocol version 1 has no typed `SecretRequired`/`ProvideSecret` host messages. Keychain persistence is real, but stored credentials are not read or delivered to the core; authenticated remote-provider translation is therefore not claimed. The production slice currently targets credential-free endpoints such as the loopback fake provider.
 - Model discovery, connection testing, core-owned provider-profile persistence, per-provider last-model persistence, and provider-secret host resolution are not exposed by the current native protocol. Manual session-only endpoint/model selection is implemented; durable one-click provider switching is not complete.
@@ -43,7 +43,7 @@ Validated on Debian x86_64 on 2026-07-17:
 - `bash tools/sync-l10n.sh --check` pinned l10n revision `7e8c987737444d4e0f8f2642b108eee4c7801f58` and reported `Localization resources are synchronized.`
 - The sibling and committed `Localizable.xcstrings` files both had SHA-256 `19b951925b7c676f42b84d7880c0d9c5383289c48920de5cf2611dbe8d7cad36` at this checkpoint.
 - Python 3.13 parsed the fake-provider fixture, the 43-key String Catalog, both plist files, and both GitHub Actions workflows; the portable syntax check passed.
-- GitHub API reads confirmed that the pinned checkout and Rust-toolchain Action commits and the pinned project, core, and localization repository commits are reachable. The core header and generated wrapper at `0db51464a9359400a2754ee86b51be2709e73709` declare ABI major 1, protocol 1, engine-bound buffer release, and resource-exhaustion result mapping. Core Native SDK run `29764592256` passed its Linux, Windows, Android, and Apple jobs.
+- GitHub API reads confirmed that the pinned checkout and Rust-toolchain Action commits and the pinned project, core, and localization repository commits are reachable. The core header and generated wrapper at `0db51464a9359400a2754ee86b51be2709e73709` declare ABI major 1, protocol 1, engine-bound buffer release, and resource-exhaustion result mapping. Core Native SDK run `29764592256` passed its Linux, Windows, Android, and Apple jobs. macOS Native run `29764929139` passed the client gate at `f5891751e345da79637c7f5c039ff4850aa1e8e1`.
 - A read-only `swift:6.1.2-noble` container typechecked the platform-neutral state, codec, bridge, model, and XCTest source against API-equivalent stubs with Swift 6 mode, complete strict concurrency, and warnings as errors. This did not validate real AppKit, Combine, Security, String Catalog compilation, XCFramework linkage, or app packaging.
 - A standalone Python 3.13 smoke test launched the loopback fixture on a random port, verified both model identifiers, posted a chat-completions request, and observed streamed content plus `data: [DONE]`.
 - `git diff --check` passed.
