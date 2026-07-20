@@ -62,15 +62,15 @@ jobs:
         env:
           HOMEBREW_NO_AUTO_UPDATE: "1"
         run: brew install ripgrep
+      - name: Validate source and localization
+        working-directory: linguamesh-macos
+        run: bash tools/check-source.sh
       - name: Build LinguaMesh Core XCFramework
         working-directory: linguamesh-core
         run: bash tools/build-apple-sdk.sh
       - name: Test generated Swift wrapper
         working-directory: linguamesh-core
         run: swift test --package-path bindings/apple
-      - name: Validate source and localization
-        working-directory: linguamesh-macos
-        run: bash tools/check-source.sh
       - name: Build with strict concurrency
         working-directory: linguamesh-macos
         run: >-
