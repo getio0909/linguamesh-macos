@@ -6,7 +6,7 @@ Status: Development; macOS platform CI verified; release pending
 
 | Component | Expected contract | Source revision | Verification |
 | --- | --- | --- | --- |
-| macOS client | `0.1.0-alpha.1` | `f5891751e345da79637c7f5c039ff4850aa1e8e1` | Native CI `29764929139` passed build, tests, bundle, and ad-hoc signing smoke check |
+| macOS client | `0.1.0-alpha.1` | `72af2d4a5189cca73e93a983bde4415a1566d446` | Native CI `29765371920` passed build, tests, bundle, and ad-hoc signing smoke check |
 | Global goal | SHA-256 `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903e36198` | `b75d4d1df2adbb3729db9425f7b999f62673e22c` | Exact digest verified locally |
 | LinguaMesh Core | `0.1.0-alpha.2`, ABI major `1`, protocol `1` | `0db51464a9359400a2754ee86b51be2709e73709` | ABI 1 wrapper/source contract pinned; short-text chunking regression fixed |
 | Localization | `0.1.0`, platform resource contract `1`, development | `7e8c987737444d4e0f8f2642b108eee4c7801f58` | Exact XCStrings SHA-256 verified locally |
