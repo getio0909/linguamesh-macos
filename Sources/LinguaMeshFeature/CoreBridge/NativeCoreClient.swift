@@ -481,7 +481,7 @@ private extension CoreTranslationEvent {
     var requiresFreshSession: Bool {
         switch self {
         case .cancelled:
-            true
+            false
         case .started, .textDelta, .completed, .failed:
             false
         }
