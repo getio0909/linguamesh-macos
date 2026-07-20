@@ -191,7 +191,6 @@ public actor NativeCoreClient: CoreClient {
                         )
                     }
                     previousSequence = envelope.sequence
-                    print("core event sequence=\(envelope.sequence) type=\(envelope.messageType)")
                     let event = try Self.decodeEvent(envelope)
                     switch continuation.yield(event) {
                     case .enqueued:
