@@ -136,8 +136,10 @@ final class NativeCoreIntegrationTests: XCTestCase {
         for try await event in secondEvents {
             switch event {
             case let .textDelta(text):
+                print("second translation text delta: \(text)")
                 output.append(text)
             case .completed:
+                print("second translation completed")
                 completed += 1
             case .cancelled, .failed:
                 XCTFail("Expected the immediate retry to complete.")
