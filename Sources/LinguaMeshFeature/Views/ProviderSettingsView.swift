@@ -16,14 +16,14 @@ public struct ProviderSettingsView: View {
                     "Name",
                     text: Binding(
                         get: { model.state.provider.displayName },
-                        set: model.setProviderName
+                        set: { value in model.setProviderName(value) }
                     )
                 )
                 TextField(
                     "Endpoint",
                     text: Binding(
                         get: { model.state.provider.endpoint },
-                        set: model.setProviderEndpoint
+                        set: { value in model.setProviderEndpoint(value) }
                     )
                 )
                 Text("Remote endpoints require HTTPS. Loopback HTTP is allowed.")
@@ -36,7 +36,7 @@ public struct ProviderSettingsView: View {
                     "Quick switch",
                     selection: Binding(
                         get: { model.state.provider.modelIdentifier },
-                        set: model.selectModel
+                        set: { value in model.selectModel(value) }
                     )
                 ) {
                     Text("fake-translator").tag("fake-translator")
@@ -46,7 +46,7 @@ public struct ProviderSettingsView: View {
                     "Manual model identifier",
                     text: Binding(
                         get: { model.state.provider.modelIdentifier },
-                        set: model.selectModel
+                        set: { value in model.selectModel(value) }
                     )
                 )
                 Text("Protocol version 1 supports manual model selection; discovery is not exposed by the native boundary yet.")
