@@ -7,6 +7,14 @@ enum ProtocolMessageType {
     static let completed = "completed"
     static let cancelled = "cancelled"
     static let failed = "failed"
+    static let secretRequired = "secret_required"
+    static let hostSecretResponse = "host_secret_response"
+}
+
+enum HostSecretResolution: String, Sendable {
+    case provided
+    case unavailable
+    case secureStorageUnavailable = "secure_storage_unavailable"
 }
 
 struct ProtocolEnvelope: Equatable, Sendable {
@@ -47,6 +55,9 @@ enum ProtocolCodec {
         try payload.appendString(field: 2, value: request.modelIdentifier)
         try payload.appendString(field: 3, value: request.sourceText)
         try payload.appendString(field: 4, value: request.targetLocale)
+        if let secretReference = request.secretReference {
+            try payload.appendString(field: 5, value: secretReference)
+        }
         let envelope = ProtocolEnvelope(
             protocolVersion: version,
             operationIdentifier: operationIdentifier,
@@ -162,6 +173,68 @@ enum ProtocolCodec {
             throw ProtocolCodecError.missingRequiredField
         }
         return ProtocolFailure(kind: kind, safeMessage: message)
+    }
+
+    static func decodeSecretRequired(_ data: Data) throws -> (requestIdentifier: String, secretReference: String) {
+        var reader = ProtobufReader(data: data)
+        var requestIdentifier: String?
+        var secretReference: String?
+        while let field = try reader.nextField() {
+            switch field.number {
+            case 1:
+                requestIdentifier = try reader.readString(field: field)
+            case 2:
+                secretReference = try reader.readString(field: field)
+            default:
+                try reader.skip(field: field)
+            }
+        }
+        guard let requestIdentifier, !requestIdentifier.isEmpty,
+              requestIdentifier.utf8.count <= 128,
+              let secretReference, !secretReference.isEmpty
+        else {
+            throw ProtocolCodecError.missingRequiredField
+        }
+        return (requestIdentifier, secretReference)
+    }
+
+    static func encodeHostSecretResponse(
+        operationIdentifier: String,
+        correlationIdentifier: String,
+        requestIdentifier: String,
+        resolution: HostSecretResolution,
+        secret: String? = nil
+    ) throws -> Data {
+        guard !requestIdentifier.isEmpty,
+              requestIdentifier.utf8.count <= 128
+        else {
+            throw ProtocolCodecError.missingRequiredField
+        }
+        let value = secret ?? ""
+        switch resolution {
+        case .provided:
+            guard !value.isEmpty, value.utf8.count <= 64 * 1024 else {
+                throw ProtocolCodecError.messageTooLarge
+            }
+        case .unavailable, .secureStorageUnavailable:
+            guard value.isEmpty else {
+                throw ProtocolCodecError.missingRequiredField
+            }
+        }
+        var payload = ProtobufWriter()
+        try payload.appendString(field: 1, value: requestIdentifier)
+        try payload.appendString(field: 2, value: resolution.rawValue)
+        try payload.appendString(field: 3, value: value)
+        return try encodeEnvelope(
+            ProtocolEnvelope(
+                protocolVersion: version,
+                operationIdentifier: operationIdentifier,
+                correlationIdentifier: correlationIdentifier,
+                sequence: 0,
+                messageType: ProtocolMessageType.hostSecretResponse,
+                payload: payload.data
+            )
+        )
     }
 }
 

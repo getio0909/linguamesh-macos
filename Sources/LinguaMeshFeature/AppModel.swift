@@ -42,7 +42,7 @@ public final class AppModel: ObservableObject {
         let credentials = KeychainCredentialStore()
         do {
             return AppModel(
-                core: try NativeCoreClient(),
+                core: try NativeCoreClient(credentialStore: credentials),
                 credentialStore: credentials,
                 preferences: preferences
             )
@@ -169,7 +169,13 @@ public final class AppModel: ObservableObject {
             endpoint: state.provider.endpoint,
             modelIdentifier: state.provider.modelIdentifier,
             sourceText: state.sourceText,
-            targetLocale: state.targetLocale
+            targetLocale: state.targetLocale,
+            secretReference: state.provider.hasStoredCredential
+                ? "session:\(UUID().uuidString.lowercased())"
+                : nil,
+            credentialAccount: state.provider.hasStoredCredential
+                ? state.provider.identifier
+                : nil
         )
         state.translatedText = ""
         state.outputIsPartial = false

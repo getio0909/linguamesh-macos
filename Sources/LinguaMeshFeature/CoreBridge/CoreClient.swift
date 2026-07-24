@@ -5,17 +5,23 @@ public struct CoreTranslationRequest: Equatable, Sendable {
     public let modelIdentifier: String
     public let sourceText: String
     public let targetLocale: String
+    public let secretReference: String?
+    public let credentialAccount: String?
 
     public init(
         endpoint: String,
         modelIdentifier: String,
         sourceText: String,
-        targetLocale: String
+        targetLocale: String,
+        secretReference: String? = nil,
+        credentialAccount: String? = nil
     ) {
         self.endpoint = endpoint
         self.modelIdentifier = modelIdentifier
         self.sourceText = sourceText
         self.targetLocale = targetLocale
+        self.secretReference = secretReference
+        self.credentialAccount = credentialAccount
     }
 }
 

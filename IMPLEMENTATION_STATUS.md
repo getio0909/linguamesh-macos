@@ -4,6 +4,12 @@ Status: Milestone 3 partial checkpoint; source and macOS CI verified, release pe
 
 Global goal SHA-256: `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903e36198`
 
+## 2026-07-24 typed host-secret checkpoint
+
+- `CoreBridge` now sends `secret_ref` in the version-1 translation command, decodes the matching `secret_required` event, resolves the requested account through the injected Keychain `CredentialStore`, and sends a bounded one-shot `host_secret_response` with `provided`, `unavailable`, or `secure_storage_unavailable` resolution. Secret values remain out of logs, diagnostics, and persisted application state.
+- The loopback fixture requires `Authorization: Bearer host-secret` for the credentialed path, and the real-wrapper XCTest covers Keychain-to-Core resolution and streamed completion. The generated Apple wrapper remains the only ABI boundary; the small codec is temporary until typed Swift protocol projections are published.
+- Core source is pinned to `b39dbdc2877a60c6666697cc0817f31225496cb2` for this checkpoint. Release status remains unreleased.
+
 ## Implemented in source
 
 - Swift 6 package with a native SwiftUI application, onboarding, navigation, settings, menu commands, runtime theme and locale switching, RTL environment, and AppKit `NSTextView` source/output controls.
@@ -22,10 +28,10 @@ Global goal SHA-256: `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903
 - No host-installed Swift compiler, Xcode, `xcodebuild`, Apple SDK, or macOS runtime exists on this Debian host. The real package, XCTest targets, XCFramework linkage, app launch, Keychain behavior under the signed app, App Sandbox, entitlements, and package script have not been built or run locally.
 - macOS Native workflow run `29765371920` passed source validation, Core XCFramework build, generated Swift wrapper tests, strict-concurrency client build, all unit/integration tests (including immediate reuse after cancellation), app bundle assembly, and ad-hoc signing smoke verification on macOS 15/Xcode 16.4.
 - The workflow pins reviewed core ABI 1 source revision `0db51464a9359400a2754ee86b51be2709e73709`; it never consumes moving `main`. The pinned Core also keeps text that fits one chunk intact, preventing duplicate provider requests for short whitespace-containing input.
-- Core protocol version 1 has no typed `SecretRequired`/`ProvideSecret` host messages. Keychain persistence is real, but stored credentials are not read or delivered to the core; authenticated remote-provider translation is therefore not claimed. The production slice currently targets credential-free endpoints such as the loopback fake provider.
+- Typed version-1 host-secret transport is now implemented and covered by source tests plus the hosted macOS gate. Keychain account/profile persistence and provider model discovery remain outside this slice; authenticated remote-provider support is not claimed until the hosted macOS evidence for this head is recorded.
 - Model discovery, connection testing, core-owned provider-profile persistence, per-provider last-model persistence, and provider-secret host resolution are not exposed by the current native protocol. Manual session-only endpoint/model selection is implemented; durable one-click provider switching is not complete.
 - Startup negotiates ABI major and protocol version only. Core semantic version, provider catalog version, feature flags, and immutable artifact checksum negotiation remain unavailable.
-- The checked-in Protobuf codec is a small temporary bridge implementation. It must be replaced by generated typed Swift protocol messages when the core SDK publishes them.
+- The checked-in Protobuf codec is a small temporary bridge implementation, including host-secret messages. It must be replaced by generated typed Swift protocol messages when the core SDK publishes them.
 - Canonical action, field, status, onboarding, diagnostics, and typed-error messages use the generated catalog, but several provider/help labels and actionable recovery suggestions still fall back to English because corresponding canonical keys do not exist. Full-window localization is not claimed.
 - No VoiceOver session, Accessibility Inspector run, XCUITest, keyboard traversal audit, reduced-motion validation, high-contrast validation, or native RTL visual inspection has been performed. Accessibility labels and keyboard commands in source are not manual evidence.
 - No dedicated `swift-format` gate, automated dependency-license audit, full secret-scanning engine, or static analyzer beyond strict compiler checks and the portable source-hygiene script is configured yet.
@@ -35,12 +41,11 @@ Global goal SHA-256: `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903
 
 ## Local validation evidence
 
-Validated on Debian x86_64 on 2026-07-17:
+Validated on Debian x86_64 on 2026-07-24:
 
 - `sha256sum ../linguamesh-project/PROJECT_GOAL.md` matched the pinned global-goal digest.
 - `bash -n tools/check-source.sh tools/package-app.sh tools/sync-localization.sh tools/sync-l10n.sh` passed.
-- `bash tools/check-source.sh` passed, including raw-C isolation, immutable Action references, comment policy, credential-signature, trailing-whitespace, patch-whitespace, project/goal pins, and localization checks.
-- `bash tools/sync-l10n.sh --check` pinned l10n revision `7e8c987737444d4e0f8f2642b108eee4c7801f58` and reported `Localization resources are synchronized.`
+- `bash tools/check-source.sh` and `bash tools/sync-l10n.sh --check` require the compatibility-pinned l10n checkout; the current sibling checkout is newer (`7fd210692bb269ef52f7453bfeb2b0f0759b1d4c`) and therefore these checks are blocked locally until the pinned detached checkout is restored.
 - The sibling and committed `Localizable.xcstrings` files both had SHA-256 `19b951925b7c676f42b84d7880c0d9c5383289c48920de5cf2611dbe8d7cad36` at this checkpoint.
 - Python 3.13 parsed the fake-provider fixture, the 43-key String Catalog, both plist files, and both GitHub Actions workflows; the portable syntax check passed.
 - GitHub API reads confirmed that the pinned checkout and Rust-toolchain Action commits and the pinned project, core, and localization repository commits are reachable. The core header and generated wrapper at `0db51464a9359400a2754ee86b51be2709e73709` declare ABI major 1, protocol 1, engine-bound buffer release, and resource-exhaustion result mapping. Core Native SDK run `29764592256` passed its Linux, Windows, Android, and Apple jobs. macOS Native run `29765371920` passed the client gate at `72af2d4a5189cca73e93a983bde4415a1566d446`.
@@ -48,4 +53,4 @@ Validated on Debian x86_64 on 2026-07-17:
 - A standalone Python 3.13 smoke test launched the loopback fixture on a random port, verified both model identifiers, posted a chat-completions request, and observed streamed content plus `data: [DONE]`.
 - `git diff --check` passed.
 
-Not run locally: `swift build`, `swift test`, `bash ../linguamesh-core/tools/build-apple-sdk.sh`, `bash tools/package-app.sh`, `codesign`, `xcodebuild`, app launch, XCTest, XCUITest, VoiceOver, Accessibility Inspector, Instruments, signing, or notarization. These require the macOS CI or a supported Apple host.
+Not run locally: `swift build`, `swift test`, `bash ../linguamesh-core/tools/build-apple-sdk.sh`, `bash tools/package-app.sh`, `codesign`, `xcodebuild`, app launch, XCTest, XCUITest, VoiceOver, Accessibility Inspector, Instruments, signing, or notarization. These require the macOS CI or a supported Apple host. The new credentialed integration test remains unverified locally for that reason.

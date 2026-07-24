@@ -14,7 +14,7 @@ Assumption: The prerelease core Swift package in `../linguamesh-core/bindings/ap
 
 Assumption: Provider profiles remain session-only until the core protocol exposes profile persistence. Only theme, locale, and onboarding completion may use `UserDefaults`; credential values use Keychain Services exclusively.
 
-Assumption: The current core does not emit typed secret requests, so this slice can translate only against credential-free endpoints such as the local fake provider. Keychain storage is implemented and tested, but credential delivery to the core is an explicit compatibility gap.
+Assumption: Core ABI 1 emits one typed `secret_required` event for a session `SecretRef`; this client resolves the corresponding Keychain account and replies once through the raw Apple wrapper method while generated Swift protocol projections remain unavailable.
 
 Assumption: Linux source checks are evidence only for repository hygiene. A macOS GitHub Actions runner must build the XCFramework, compile the package, run XCTest, exercise the real wrapper against the fake provider, and assemble an ad-hoc-signed smoke-test app before product-build claims are made.
 
@@ -25,4 +25,4 @@ Assumption: Linux source checks are evidence only for repository hygiene. A macO
 - [x] Add unit, Keychain, protocol, cancellation, and real-wrapper integration tests.
 - [x] Add deterministic localization synchronization, macOS CI, and unsigned app-bundle packaging.
 - [x] Run local hygiene checks and record unavailable local Xcode validation accurately.
-- [ ] Obtain and record successful macOS CI evidence before marking the native slice verified.
+- [ ] Obtain and record successful macOS CI evidence for the typed host-secret head before marking the native slice verified.

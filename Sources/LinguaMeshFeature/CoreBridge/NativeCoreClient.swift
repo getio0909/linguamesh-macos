@@ -34,6 +34,10 @@ private final class CoreSession: @unchecked Sendable {
         try engine.cancel()
     }
 
+    func sendHostResponse(_ response: Data) throws {
+        try engine.sendHostResponse(response)
+    }
+
     func shutdown() throws {
         try engine.shutdown()
     }
@@ -62,8 +66,10 @@ public actor NativeCoreClient: CoreClient {
     private var activeOperationIdentifier: String?
     private var activeWorker: Task<Void, Never>?
     private var activeTerminationSignal: StreamTerminationSignal?
+    private let credentialStore: any CredentialStore
 
-    public init() throws {
+    public init(credentialStore: any CredentialStore = KeychainCredentialStore()) throws {
+        self.credentialStore = credentialStore
         do {
             session = try CoreSession()
         } catch {
@@ -115,7 +121,9 @@ public actor NativeCoreClient: CoreClient {
         activeOperationIdentifier = operationIdentifier
         return makeEventStream(
             operationIdentifier: operationIdentifier,
-            correlationIdentifier: correlationIdentifier
+            correlationIdentifier: correlationIdentifier,
+            secretReference: request.secretReference,
+            credentialAccount: request.credentialAccount
         )
     }
 
@@ -144,15 +152,18 @@ public actor NativeCoreClient: CoreClient {
 
     private func makeEventStream(
         operationIdentifier: String,
-        correlationIdentifier: String
+        correlationIdentifier: String,
+        secretReference: String?,
+        credentialAccount: String?
     ) -> AsyncThrowingStream<CoreTranslationEvent, Error> {
         let session = session
+        let credentialStore = credentialStore
         let terminationSignal = StreamTerminationSignal()
         let streamAndContinuation = AsyncThrowingStream<CoreTranslationEvent, Error>.makeStream(
             bufferingPolicy: .bufferingOldest(128)
         )
         let continuation = streamAndContinuation.continuation
-        let worker = Task.detached(priority: .userInitiated) { [weak self] in
+        let worker = Task.detached(priority: .userInitiated) { [weak self, credentialStore] in
             var previousSequence: UInt64?
             do {
                 while !Task.isCancelled {
@@ -191,6 +202,27 @@ public actor NativeCoreClient: CoreClient {
                         )
                     }
                     previousSequence = envelope.sequence
+                    if envelope.messageType == ProtocolMessageType.secretRequired {
+                        let required = try ProtocolCodec.decodeSecretRequired(envelope.payload)
+                        guard let secretReference,
+                              let credentialAccount,
+                              required.secretReference == secretReference
+                        else {
+                            throw ClientFailure(
+                                kind: .malformedResponse,
+                                safeMessage: "The core requested an unexpected secret reference."
+                            )
+                        }
+                        try await Self.resolveHostSecret(
+                            session: session,
+                            operationIdentifier: operationIdentifier,
+                            correlationIdentifier: correlationIdentifier,
+                            requestIdentifier: required.requestIdentifier,
+                            credentialAccount: credentialAccount,
+                            credentialStore: credentialStore
+                        )
+                        continue
+                    }
                     let event = try Self.decodeEvent(envelope)
                     switch continuation.yield(event) {
                     case .enqueued:
@@ -267,6 +299,50 @@ public actor NativeCoreClient: CoreClient {
             }
         }
         return streamAndContinuation.stream
+    }
+
+    private static func resolveHostSecret(
+        session: CoreSession,
+        operationIdentifier: String,
+        correlationIdentifier: String,
+        requestIdentifier: String,
+        credentialAccount: String,
+        credentialStore: any CredentialStore
+    ) async throws {
+        let response: Data
+        do {
+            guard let value = try await credentialStore.credential(account: credentialAccount),
+                  !value.isEmpty
+            else {
+                response = try ProtocolCodec.encodeHostSecretResponse(
+                    operationIdentifier: operationIdentifier,
+                    correlationIdentifier: correlationIdentifier,
+                    requestIdentifier: requestIdentifier,
+                    resolution: .unavailable
+                )
+                try session.sendHostResponse(response)
+                return
+            }
+            var secret = value
+            defer { secret.removeAll(keepingCapacity: false) }
+            response = try ProtocolCodec.encodeHostSecretResponse(
+                operationIdentifier: operationIdentifier,
+                correlationIdentifier: correlationIdentifier,
+                requestIdentifier: requestIdentifier,
+                resolution: .provided,
+                secret: secret
+            )
+        } catch is CancellationError {
+            throw CancellationError()
+        } catch {
+            response = try ProtocolCodec.encodeHostSecretResponse(
+                operationIdentifier: operationIdentifier,
+                correlationIdentifier: correlationIdentifier,
+                requestIdentifier: requestIdentifier,
+                resolution: .secureStorageUnavailable
+            )
+        }
+        try session.sendHostResponse(response)
     }
 
     private func operationFinished(

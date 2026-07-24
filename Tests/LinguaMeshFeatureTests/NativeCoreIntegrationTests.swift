@@ -35,6 +35,37 @@ final class NativeCoreIntegrationTests: XCTestCase {
         try await core.shutdown()
     }
 
+    func testRealCoreWrapperResolvesKeychainSecretThroughHostResponse() async throws {
+        let provider = try FakeProviderProcess.start()
+        defer { provider.stop() }
+        let credentials = TestCredentialStore()
+        try await credentials.store("host-secret", account: "provider-account")
+        let core = try NativeCoreClient(credentialStore: credentials)
+        let events = try await core.translate(
+            CoreTranslationRequest(
+                endpoint: provider.endpoint,
+                modelIdentifier: "fake-translator",
+                sourceText: "[secret-required]",
+                targetLocale: "zh-CN",
+                secretReference: "session:11111111-1111-4111-8111-111111111111",
+                credentialAccount: "provider-account"
+            )
+        )
+        var output = ""
+        for try await event in events {
+            switch event {
+            case let .textDelta(text):
+                output.append(text)
+            case .started, .completed:
+                break
+            case .cancelled, .failed:
+                XCTFail("Expected a credentialed translation to complete.")
+            }
+        }
+        XCTAssertEqual(output, "你好，LinguaMesh！")
+        try await core.shutdown()
+    }
+
     func testRealCoreWrapperCancellationRetainsPartialOutput() async throws {
         let provider = try FakeProviderProcess.start()
         defer { provider.stop() }
@@ -212,4 +243,24 @@ private final class FakeProviderProcess: @unchecked Sendable {
 private enum FakeProviderError: Error {
     case fixtureUnavailable
     case startupFailed
+}
+
+private actor TestCredentialStore: CredentialStore {
+    private var values: [String: String] = [:]
+
+    func store(_ credential: String, account: String) async throws {
+        values[account] = credential
+    }
+
+    func credential(account: String) async throws -> String? {
+        values[account]
+    }
+
+    func containsCredential(account: String) async throws -> Bool {
+        values[account] != nil
+    }
+
+    func deleteCredential(account: String) async throws {
+        values[account] = nil
+    }
 }
