@@ -25,4 +25,4 @@ Assumption: Linux source checks are evidence only for repository hygiene. A macO
 - [x] Add unit, Keychain, protocol, cancellation, and real-wrapper integration tests.
 - [x] Add deterministic localization synchronization, macOS CI, and unsigned app-bundle packaging.
 - [x] Run local hygiene checks and record unavailable local Xcode validation accurately.
-- [ ] Obtain and record successful macOS CI evidence for the typed host-secret head before marking the native slice verified.
+- [x] Obtain and record successful macOS CI evidence for typed host-secret head `c528bfc` in run `30095987188` (Core wrapper, strict build, 20 XCTest cases, bundle, and ad-hoc signature).

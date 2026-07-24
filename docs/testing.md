@@ -28,7 +28,7 @@ codesign --force --deep --sign - --options runtime \
 codesign --verify --deep --strict dist/LinguaMesh.app
 ```
 
-XCTest covers Protobuf framing and malformed data, immutable state updates, streamed output, cancellation with partial output, immediate reuse after consumer cancellation, UI locale/theme preservation, preference isolation, Keychain lifecycle, and the real generated core wrapper against a loopback OpenAI-compatible SSE fixture. The fixture uses Python's standard library and requires no commercial credential.
+XCTest covers Protobuf framing and malformed data, immutable state updates, streamed output, cancellation with partial output, immediate reuse after consumer cancellation, UI locale/theme preservation, preference isolation, Keychain lifecycle, and the real generated core wrapper against a loopback OpenAI-compatible SSE fixture. The credentialed fixture path proves a one-shot Keychain secret response without a commercial credential; the fixture uses Python's standard library.
 
 ## Validation matrix
 

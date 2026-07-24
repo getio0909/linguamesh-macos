@@ -6,7 +6,7 @@ Status: Development; macOS platform CI verified; release pending
 
 | Component | Expected contract | Source revision | Verification |
 | --- | --- | --- | --- |
-| macOS client | `0.1.0-alpha.1` | `TBD (typed host-secret head)` | Hosted macOS validation pending for the typed host-secret transport |
+| macOS client | `0.1.0-alpha.1` | `c528bfc` | Native CI `30095987188` passed Core XCFramework, strict Swift, 20 XCTest cases, app bundle, and ad-hoc signing smoke |
 | Global goal | SHA-256 `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903e36198` | `b75d4d1df2adbb3729db9425f7b999f62673e22c` | Exact digest verified locally |
 | LinguaMesh Core | `0.1.0-alpha.2`, ABI major `1`, protocol `1` | `b39dbdc2877a60c6666697cc0817f31225496cb2` | ABI 1 typed secret event/response contract pinned; short-text chunking regression fixed |
 | Localization | `0.1.0`, platform resource contract `1`, development | `7e8c987737444d4e0f8f2642b108eee4c7801f58` | Exact XCStrings SHA-256 verified locally |

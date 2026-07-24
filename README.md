@@ -29,7 +29,7 @@ swift test --configuration debug --parallel -Xswiftc -warnings-as-errors -Xswift
 bash tools/package-app.sh
 ```
 
-The macOS workflow builds the sibling core XCFramework, runs unit and real-wrapper fake-provider integration tests, assembles an app bundle, and applies an ad-hoc signature for packaging verification. This is not distribution signing or notarization.
+The macOS workflow builds the sibling core XCFramework, runs unit and real-wrapper fake-provider integration tests (including the typed Keychain host-secret path), assembles an app bundle, and applies an ad-hoc signature for packaging verification. This is not distribution signing or notarization.
 
 ## Run the local translation slice
 
