@@ -2,17 +2,17 @@
 
 Checkpoint: `M3-typed-host-secret-20260724`
 
-Status: Development; macOS platform CI pending for the current Core descendant; release pending
+Status: Development; macOS platform CI verified for the current Core descendant; release pending
 
 ## 2026-07-24 Core VFS-descendant compatibility checkpoint
 
 Assumption: Core `9e69d01cbae1ca0421923e059aa3252c4ecbe1be` changes Linux-only storage coverage
-without changing the ABI-1 typed host-secret contract consumed by macOS. The exact XCFramework
-rebuild and macOS client checks must be verified by hosted CI before this pin is treated as current.
+without changing the ABI-1 typed host-secret contract consumed by macOS. Hosted workflow
+`30101369965` verified the exact XCFramework and client checks.
 
 | Component | Expected contract | Source revision | Verification |
 | --- | --- | --- | --- |
-| macOS client | `0.1.0-alpha.1` | `c528bfc` | Native CI `30095987188` passed Core XCFramework, strict Swift, 20 XCTest cases, app bundle, and ad-hoc signing smoke |
+| macOS client | `0.1.0-alpha.1` | `afc80dc0b76f8fc45be641065c703929bbcac552` | Native CI `30101369965` passed exact Core XCFramework, strict Swift, unit/integration tests, app bundle, and ad-hoc signing smoke |
 | Global goal | SHA-256 `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903e36198` | `b75d4d1df2adbb3729db9425f7b999f62673e22c` | Exact digest verified locally |
 | LinguaMesh Core | `0.1.0-alpha.2`, ABI major `1`, protocol `1` | `9e69d01cbae1ca0421923e059aa3252c4ecbe1be` | ABI 1 typed secret event/response contract pinned; Linux-only VFS descendant pending hosted macOS verification |
 | Localization | `0.1.0`, platform resource contract `1`, development | `7fd210692bb269ef52f7453bfeb2b0f0759b1d4c` | Exact XCStrings SHA-256 verified locally |

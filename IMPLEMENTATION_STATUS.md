@@ -11,8 +11,10 @@ contract while adding Linux-only storage coverage; macOS does not depend on Linu
 
 - macOS workflow and source gates now pin Core `9e69d01cbae1ca0421923e059aa3252c4ecbe1be` and
   l10n `7fd210692bb269ef52f7453bfeb2b0f0759b1d4c`. The generated catalog bytes remain identical.
-- Hosted macOS rebuild and client validation are pending for this new pin; release remains
-  `unreleased` until the exact XCFramework, strict Swift tests, packaging, and ad-hoc smoke pass.
+- Hosted macOS workflow `30101369965` rebuilt the exact Core XCFramework and passed generated
+  wrapper tests, strict Swift concurrency, the full unit/integration suite, app assembly, and
+  ad-hoc signing smoke. Release remains `unreleased` because distribution, device/accessibility,
+  document, and rollback evidence is incomplete.
 - Existing typed host-secret tests remain bounded and no-secret; app accessibility, profile
   persistence, document workflows, signing, rollback, and stable-release evidence remain open.
 

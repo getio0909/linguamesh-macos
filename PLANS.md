@@ -12,8 +12,9 @@ behavior.
 
 - [x] Repin the macOS workflow/source gate to Core `9e69d01cbae1ca0421923e059aa3252c4ecbe1be`
   and l10n `7fd210692bb269ef52f7453bfeb2b0f0759b1d4c`.
-- [ ] Run hosted macOS Core XCFramework, strict Swift, XCTest, package, and ad-hoc signing smoke
-  checks for the new pin; keep release `unreleased` until they pass.
+- [x] Run hosted macOS Core XCFramework, strict Swift, XCTest, package, and ad-hoc signing smoke
+  checks for the new pin in workflow `30101369965`; keep release `unreleased` because distribution
+  and manual/device evidence remain open.
 - [ ] Keep generated Swift protocol projections, profile persistence, document workflows, manual
   accessibility, distribution signing, rollback, cross-client conformance, and stable-release
   evidence open.
