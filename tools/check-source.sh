@@ -32,7 +32,7 @@ done
 
 expected_goal='11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903e36198'
 expected_project_revision='b75d4d1df2adbb3729db9425f7b999f62673e22c'
-expected_core_revision='b39dbdc2877a60c6666697cc0817f31225496cb2'
+expected_core_revision='9e69d01cbae1ca0421923e059aa3252c4ecbe1be'
 git -C ../linguamesh-project merge-base --is-ancestor "$expected_project_revision" HEAD || {
     printf '%s\n' 'Project checkout does not contain the compatibility-pinned revision.' >&2
     exit 1

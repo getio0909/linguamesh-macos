@@ -4,6 +4,20 @@ Status: Active
 
 Authority: `GLOBAL_GOAL.md` and the sibling `linguamesh-project/PROJECT_GOAL.md`
 
+## 2026-07-24 Core VFS-descendant compatibility checkpoint
+
+Assumption: Core `9e69d01cbae1ca0421923e059aa3252c4ecbe1be` preserves the macOS ABI-1 typed
+host-secret contract while adding Linux-only storage tests; macOS does not depend on Linux VFS
+behavior.
+
+- [x] Repin the macOS workflow/source gate to Core `9e69d01cbae1ca0421923e059aa3252c4ecbe1be`
+  and l10n `7fd210692bb269ef52f7453bfeb2b0f0759b1d4c`.
+- [ ] Run hosted macOS Core XCFramework, strict Swift, XCTest, package, and ad-hoc signing smoke
+  checks for the new pin; keep release `unreleased` until they pass.
+- [ ] Keep generated Swift protocol projections, profile persistence, document workflows, manual
+  accessibility, distribution signing, rollback, cross-client conformance, and stable-release
+  evidence open.
+
 ## Goal
 
 Deliver a real SwiftUI/AppKit text-translation slice that calls the generated LinguaMesh Core Swift wrapper, streams a loopback fake-provider response, cancels an active operation, stores credentials only in Keychain, switches theme and locale without losing text, and exposes redacted compatibility diagnostics.

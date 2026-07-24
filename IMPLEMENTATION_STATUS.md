@@ -4,11 +4,23 @@ Status: Milestone 3 partial checkpoint; source and macOS CI verified, release pe
 
 Global goal SHA-256: `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903e36198`
 
+## 2026-07-24 Core VFS-descendant macOS compatibility checkpoint
+
+Assumption: Core `9e69d01cbae1ca0421923e059aa3252c4ecbe1be` preserves the ABI-1 typed host-secret
+contract while adding Linux-only storage coverage; macOS does not depend on Linux VFS behavior.
+
+- macOS workflow and source gates now pin Core `9e69d01cbae1ca0421923e059aa3252c4ecbe1be` and
+  l10n `7fd210692bb269ef52f7453bfeb2b0f0759b1d4c`. The generated catalog bytes remain identical.
+- Hosted macOS rebuild and client validation are pending for this new pin; release remains
+  `unreleased` until the exact XCFramework, strict Swift tests, packaging, and ad-hoc smoke pass.
+- Existing typed host-secret tests remain bounded and no-secret; app accessibility, profile
+  persistence, document workflows, signing, rollback, and stable-release evidence remain open.
+
 ## 2026-07-24 typed host-secret checkpoint
 
 - `CoreBridge` now sends `secret_ref` in the version-1 translation command, decodes the matching `secret_required` event, resolves the requested account through the injected Keychain `CredentialStore`, and sends a bounded one-shot `host_secret_response` with `provided`, `unavailable`, or `secure_storage_unavailable` resolution. Secret values remain out of logs, diagnostics, and persisted application state.
 - The loopback fixture requires `Authorization: Bearer host-secret` for the credentialed path, and the real-wrapper XCTest covers Keychain-to-Core resolution and streamed completion. The generated Apple wrapper remains the only ABI boundary; the small codec is temporary until typed Swift protocol projections are published.
-- Core source is pinned to `b39dbdc2877a60c6666697cc0817f31225496cb2` for this checkpoint. Release status remains unreleased.
+- Core source is pinned to `9e69d01cbae1ca0421923e059aa3252c4ecbe1be` for this checkpoint. Release status remains unreleased.
 
 ## Implemented in source
 
