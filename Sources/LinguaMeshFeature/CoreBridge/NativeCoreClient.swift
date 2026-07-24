@@ -309,7 +309,7 @@ public actor NativeCoreClient: CoreClient {
         credentialAccount: String,
         credentialStore: any CredentialStore
     ) async throws {
-        let response: Data
+        var response: Data
         do {
             guard let value = try await credentialStore.credential(account: credentialAccount),
                   !value.isEmpty
