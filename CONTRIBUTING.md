@@ -17,4 +17,4 @@ Use short imperative commit subjects, optionally scoped, such as `docs: define m
 
 ## Validation
 
-Run the complete current foundation check in `docs/testing.md`. Product format, lint, test, and build commands do not exist yet and must not be reported as run. Once native targets are introduced, update `docs/testing.md` and CI in the same change.
+Run the complete source, strict-concurrency build, XCTest, real-wrapper integration, and app-bundle checks in `docs/testing.md`. macOS product results must come from an Apple host with the compatible core XCFramework. Do not describe an ad-hoc signature as distribution signing or notarization.

@@ -1,19 +1,30 @@
 # macOS Architecture
 
-## Current state
+## Implemented slice
 
-This repository is documentation-only. No application architecture has been instantiated and no product capability is claimed.
+`LinguaMeshApp` is a small SwiftUI application target. `LinguaMeshFeature` owns immutable value state, a main-actor observable model, SwiftUI views, an AppKit `NSTextView` bridge, Keychain access, localization lookup, and the native core boundary. Provider transport, streaming parsing, cancellation semantics, and typed provider errors remain in `linguamesh-core`.
 
-## Required boundaries
+The state flow is unidirectional:
 
-The future client will use SwiftUI for the application shell and normal views, with AppKit isolated to integrations or measured performance needs. UI state will be immutable where practical, work will use Swift concurrency, and blocking core polling, network, database, or document operations must remain off the main actor.
+1. a native view sends a deliberate action to `AppModel`;
+2. the model snapshots a non-secret request and, when a provider credential exists, adds a session-only `SecretRef` plus a non-secret Keychain account identifier before submitting it through `CoreClient`;
+3. `NativeCoreClient` uses only the generated `LinguaMeshCore` Swift wrapper and answers one matching host-secret request from the injected `CredentialStore`;
+4. a detached non-UI task performs bounded event polling and validates protocol version, operation and correlation identity, sequence order, message size, and event type;
+5. consumer cancellation requests core cancellation, drains for at most two seconds to the matching terminal event, and recreates the session before another request can be accepted;
+6. the main actor replaces or appends immutable state values for SwiftUI rendering.
 
-One tested bridge module will own the generated Swift wrapper and LinguaMesh Core XCFramework interaction. UI and platform-service layers must not call raw C functions throughout the application. Startup must negotiate core semantic, ABI, protocol, catalog, and feature versions and fail safely on incompatibility.
+The temporary Protobuf encoder/decoder is contained in `CoreBridge/ProtocolCodec.swift`. It exists because the prerelease core package does not yet ship typed generated Swift protocol messages. The generated wrapper keeps its engine handle alive while it copies and releases each engine-owned event buffer; application code never handles that pointer or calls raw C symbols.
 
-The client owns native lifecycle, navigation, accessibility, menus, shortcuts, file panels, drag-and-drop, clipboard, notifications, appearance, sandbox permissions, and credential resolution. Shared provider, routing, translation, document, persistence, and error-domain behavior remains in `linguamesh-core`.
+## Native ownership
+
+SwiftUI provides onboarding, navigation, forms, settings, alerts, theme, locale environment, RTL direction, and menu commands. AppKit provides scalable editable/selectable text views and clipboard integration. `UserDefaultsUIPreferences` stores only theme, locale, and onboarding completion. Provider name, endpoint, and model remain session-only until core-owned profile APIs exist.
 
 ## Security boundaries
 
-Credentials must be stored in an application-specific Keychain namespace and supplied only for the requested operation. Persistent user-selected file access must use security-scoped bookmarks or URLs with balanced access lifetimes. Translation content must not enter normal logs or diagnostics. Signing and notarization material must remain outside the repository and outside untrusted CI.
+`KeychainCredentialStore` uses an application-specific Generic Password service and device-local accessibility. The UI clears its transient `SecureField` value immediately after requesting a save. Diagnostics contain only versions, configuration identifiers, and normalized error categories; they exclude credential values, authorization data, source text, output, and endpoint query data.
+
+Core protocol version 1 requests a `SecretRef` only as an opaque session identifier. The client reads the matching account from Keychain and sends the secret only in the bounded one-shot host response; it never enters application state or diagnostics. Provider-profile persistence and generated typed Swift protocol messages remain open.
+
+Persistent document access is not implemented. Future file work must use balanced security-scoped URLs and bookmarks. Signing and notarization material remains outside source and untrusted CI.
 
 Architectural changes affecting the ABI, protocol, sandbox, persistence ownership, or distribution model require a central compatibility decision before implementation.

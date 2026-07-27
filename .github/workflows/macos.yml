@@ -1,0 +1,123 @@
+name: macOS Native Client
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: macos-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  native:
+    runs-on: macos-15
+    timeout-minutes: 35
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - name: Check out macOS client
+        # 固定 actions/checkout v7.0.0。
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          persist-credentials: false
+          path: linguamesh-macos
+      - name: Check out project specification
+        # 固定 actions/checkout v7.0.0。
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: ${{ github.repository_owner }}/linguamesh-project
+          ref: b75d4d1df2adbb3729db9425f7b999f62673e22c
+          persist-credentials: false
+          path: linguamesh-project
+      - name: Check out core
+        # 固定 actions/checkout v7.0.0。
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: ${{ github.repository_owner }}/linguamesh-core
+          ref: cb061d24a3e0c4059a65d099d30bc643e9e079ea
+          persist-credentials: false
+          path: linguamesh-core
+      - name: Check out localization source
+        # 固定 actions/checkout v7.0.0。
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: ${{ github.repository_owner }}/linguamesh-l10n
+          ref: 43f5a6f069f6d0e6d075517b0c017784fe505b0d
+          persist-credentials: false
+          path: linguamesh-l10n
+      - name: Install pinned Rust toolchain
+        # 固定 dtolnay/rust-toolchain 1.93.0 分支提交。
+        uses: dtolnay/rust-toolchain@d0befba8b9ddf874327619e84c39b094edd58b66
+      - name: Record Apple toolchains
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          swift --version
+      - name: Install source-check tools
+        env:
+          HOMEBREW_NO_AUTO_UPDATE: "1"
+        run: brew install ripgrep
+      - name: Validate source and localization
+        working-directory: linguamesh-macos
+        run: bash tools/check-source.sh
+      - name: Build LinguaMesh Core XCFramework
+        working-directory: linguamesh-core
+        run: bash tools/build-apple-sdk.sh
+      - name: Test generated Swift wrapper
+        working-directory: linguamesh-core
+        run: swift test --package-path bindings/apple
+      - name: Build with strict concurrency
+        working-directory: linguamesh-macos
+        run: >-
+          swift build --configuration debug
+          -Xswiftc -warnings-as-errors
+          -Xswiftc -strict-concurrency=complete
+      - name: Run unit and integration tests
+        working-directory: linguamesh-macos
+        run: >-
+          swift test --configuration debug --parallel
+          -Xswiftc -warnings-as-errors
+          -Xswiftc -strict-concurrency=complete
+      - name: Assemble app bundle
+        working-directory: linguamesh-macos
+        run: bash tools/package-app.sh
+      - name: Ad-hoc sign packaging smoke test
+        working-directory: linguamesh-macos
+        run: |
+          set -euo pipefail
+          codesign --force --deep --sign - --options runtime \
+            --entitlements Packaging/LinguaMesh.entitlements \
+            dist/LinguaMesh.app
+          codesign --verify --deep --strict dist/LinguaMesh.app
+          plutil -lint dist/LinguaMesh.app/Contents/Info.plist
+
+      - name: Stage macOS release artifact
+        working-directory: linguamesh-macos
+        run: |
+          set -euo pipefail
+          release_dir="dist/release"
+          mkdir -p "$release_dir"
+          ditto -c -k --sequesterRsrc --keepParent \
+            dist/LinguaMesh.app "$release_dir/LinguaMesh-macos-prerelease-adhoc.zip"
+          printf '%s\n' \
+            'Core revision: cb061d24a3e0c4059a65d099d30bc643e9e079ea' \
+            'Localization revision: 43f5a6f069f6d0e6d075517b0c017784fe505b0d' \
+            'Artifact status: prerelease; ad-hoc signed' > "$release_dir/BUILD-INFO.txt"
+          (
+            cd "$release_dir"
+            shasum -a 256 -- LinguaMesh-macos-prerelease-adhoc.zip > SHA256SUMS
+          )
+
+      - name: Upload macOS release artifact
+        # 固定到 actions/upload-artifact v7.0.1。
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: linguamesh-macos-release-${{ github.sha }}
+          path: linguamesh-macos/dist/release
+          if-no-files-found: error
+          retention-days: 14

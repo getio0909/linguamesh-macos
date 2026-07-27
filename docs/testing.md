@@ -1,37 +1,44 @@
 # Testing and Validation
 
-## Current foundation checks
+## Source checks
 
-Setup requires only Git and standard POSIX shell tools. From the repository root, run this exact validation:
+With Git, ripgrep, standard POSIX tools, and the canonical sibling repositories present, run:
 
 ```sh
-set -euo pipefail
-required_files="README.md LICENSE AGENTS.md REPOSITORY_ROLE.md GLOBAL_GOAL.md SECURITY.md CONTRIBUTING.md CODE_OF_CONDUCT.md THIRD_PARTY_NOTICES.md IMPLEMENTATION_STATUS.md docs/architecture.md docs/testing.md docs/releasing.md .gitignore .github/workflows/foundation.yml"
-for file in $required_files; do
-  test -s "$file" || {
-    printf 'Missing required file: %s\n' "$file"
-    exit 1
-  }
-done
-grep -Fqx 'Global goal SHA-256: `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903e36198`' GLOBAL_GOAL.md
-if find . -type f \( -name '*.md' -o -name '*.yml' \) -not -path './.git/*' -exec awk '/[[:blank:]]$/ { printf "%s:%d: trailing whitespace\n", FILENAME, FNR; bad=1 } END { exit bad }' {} +; then
-  printf '%s\n' 'Foundation validation passed.'
-else
-  exit 1
-fi
-git diff --check
+bash -n tools/check-source.sh tools/package-app.sh tools/sync-localization.sh tools/sync-l10n.sh
+bash tools/check-source.sh
 ```
 
-This validates required non-empty files, the pinned goal digest, trailing whitespace, and tracked-file patch whitespace. It does not build or test an application.
+The source check verifies required inputs, the compatibility-pinned project revision and exact goal digest, exact localization generation, immutable GitHub Action references, the raw-C isolation boundary, comment policy, common credential signatures, trailing whitespace, and patch whitespace.
 
-## Command availability
+## macOS product checks
+
+On a supported macOS host with Xcode command-line tools and Rust 1.93.0:
+
+```sh
+cd ../linguamesh-core
+bash tools/build-apple-sdk.sh
+swift test --package-path bindings/apple
+cd ../linguamesh-macos
+swift build --configuration debug -Xswiftc -warnings-as-errors -Xswiftc -strict-concurrency=complete
+swift test --configuration debug --parallel -Xswiftc -warnings-as-errors -Xswiftc -strict-concurrency=complete
+bash tools/package-app.sh
+codesign --force --deep --sign - --options runtime \
+  --entitlements Packaging/LinguaMesh.entitlements dist/LinguaMesh.app
+codesign --verify --deep --strict dist/LinguaMesh.app
+```
+
+XCTest covers Protobuf framing and malformed data, immutable state updates, streamed output, cancellation with partial output, immediate reuse after consumer cancellation, UI locale/theme preservation, preference isolation, Keychain lifecycle, and the real generated core wrapper against a loopback OpenAI-compatible SSE fixture. The credentialed fixture path proves a one-shot Keychain secret response without a commercial credential; the fixture uses Python's standard library.
+
+## Validation matrix
 
 | Activity | Current command | Status |
 | --- | --- | --- |
-| Setup | No dependency command | Foundation has no dependencies |
-| Format | No formatter command | Unavailable until Swift sources and policy exist |
-| Lint | Foundation shell block above | Available for documentation only |
-| Test | No product test command | Unavailable until test targets exist |
-| Build | No product build command | Unavailable until an Xcode project exists |
+| Setup | `bash ../linguamesh-core/tools/build-apple-sdk.sh` | Requires macOS, Xcode, and pinned Rust |
+| Localization | `bash tools/sync-l10n.sh --check` | Portable with pinned sibling l10n checkout |
+| Lint | `bash tools/check-source.sh` | Portable source/security checks |
+| Build | `swift build ...` | macOS CI gate |
+| Test | `swift test ...` | macOS CI gate |
+| Package | `bash tools/package-app.sh` | Unsigned app-bundle smoke test |
 
-When implementation begins, replace unavailable entries with exact pinned toolchain and scheme commands. Product CI must eventually cover Swift formatting/static analysis, XCTest, XCUITest, strict concurrency, core-wrapper tests, accessibility, sandbox/bookmark behavior, release builds, and packaging smoke tests. Do not record these future checks as passing before they run.
+The ad-hoc signature validates bundle structure and entitlements only. XCUITest, VoiceOver inspection, security-scoped bookmark tests, distribution signing, notarization, and DMG validation remain future gates. Do not infer those results from unit tests.
