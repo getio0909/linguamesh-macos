@@ -4,6 +4,17 @@ Status: Milestone 3 partial checkpoint; source and macOS CI verified, release pe
 
 Global goal SHA-256: `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903e36198`
 
+## 2026-07-27 Central project-spec pin refresh
+
+Assumption: the macOS workflow must consume the current central prerelease coordination commit;
+this CI pin refresh does not claim distribution signing, notarization, device, or stable evidence.
+
+- The workflow project checkout and portable source gate now pin central
+  `44068ddd750282e9ffa69c9816b4361ac1858641`, which records the published `.4` manifest and
+  current cross-repository evidence.
+- Core and localization pins remain `cb061d24a3e0c4059a65d099d30bc643e9e079ea` and
+  `43f5a6f069f6d0e6d075517b0c017784fe505b0d`; the next Hosted macOS run must verify all three.
+
 ## 2026-07-27 Hosted prerelease artifact checkpoint
 
 Assumption: the ad-hoc signed archive is packaging evidence only; distribution signing,
