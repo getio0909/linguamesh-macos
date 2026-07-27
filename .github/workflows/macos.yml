@@ -95,3 +95,29 @@ jobs:
             dist/LinguaMesh.app
           codesign --verify --deep --strict dist/LinguaMesh.app
           plutil -lint dist/LinguaMesh.app/Contents/Info.plist
+
+      - name: Stage macOS release artifact
+        working-directory: linguamesh-macos
+        run: |
+          set -euo pipefail
+          release_dir="dist/release"
+          mkdir -p "$release_dir"
+          ditto -c -k --sequesterRsrc --keepParent \
+            dist/LinguaMesh.app "$release_dir/LinguaMesh-macos-prerelease-adhoc.zip"
+          printf '%s\n' \
+            'Core revision: cb061d24a3e0c4059a65d099d30bc643e9e079ea' \
+            'Localization revision: 43f5a6f069f6d0e6d075517b0c017784fe505b0d' \
+            'Artifact status: prerelease; ad-hoc signed' > "$release_dir/BUILD-INFO.txt"
+          (
+            cd "$release_dir"
+            shasum -a 256 -- LinguaMesh-macos-prerelease-adhoc.zip > SHA256SUMS
+          )
+
+      - name: Upload macOS release artifact
+        # 固定到 actions/upload-artifact v7.0.1。
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: linguamesh-macos-release-${{ github.sha }}
+          path: linguamesh-macos/dist/release
+          if-no-files-found: error
+          retention-days: 14
