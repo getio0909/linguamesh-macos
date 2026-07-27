@@ -4,6 +4,17 @@ Status: Milestone 3 partial checkpoint; source and macOS CI verified, release pe
 
 Global goal SHA-256: `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903e36198`
 
+## 2026-07-27 Central Linux-first prerelease pin alignment
+
+Assumption: the central prerelease compatibility train is the authoritative macOS CI input; the
+pin update does not claim device, accessibility, notarization, or stable-release evidence.
+
+- Workflow, source hygiene, and localization checks now consume Core
+  `cb061d24a3e0c4059a65d099d30bc643e9e079ea` and l10n
+  `43f5a6f069f6d0e6d075517b0c017784fe505b0d`, matching central `release-manifest.toml`.
+- Hosted macOS validation for this exact pair is required before adding a macOS artifact to the
+  central prerelease; device, accessibility, notarization, and distribution gates remain open.
+
 ## 2026-07-24 Core VFS-descendant macOS compatibility checkpoint
 
 Assumption: Core `9e69d01cbae1ca0421923e059aa3252c4ecbe1be` preserves the ABI-1 typed host-secret

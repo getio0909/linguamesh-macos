@@ -4,6 +4,13 @@ Status: Active
 
 Authority: `GLOBAL_GOAL.md` and the sibling `linguamesh-project/PROJECT_GOAL.md`
 
+## 2026-07-27 Central prerelease pin alignment
+
+- [x] Align the macOS workflow, source gate, and localization gate to Core
+  `cb061d24a3e0c4059a65d099d30bc643e9e079ea` and l10n
+  `43f5a6f069f6d0e6d075517b0c017784fe505b0d`.
+- [ ] Re-run hosted macOS build/test/package evidence before central artifact publication.
+
 ## 2026-07-24 Core VFS-descendant compatibility checkpoint
 
 Assumption: Core `9e69d01cbae1ca0421923e059aa3252c4ecbe1be` preserves the macOS ABI-1 typed

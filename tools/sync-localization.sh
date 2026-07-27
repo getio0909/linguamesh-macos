@@ -5,7 +5,7 @@ set -euo pipefail
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 source_catalog="$repo_root/../linguamesh-l10n/generated/macos/Localizable.xcstrings"
 target_catalog="$repo_root/Sources/LinguaMeshFeature/Resources/Localizable.xcstrings"
-expected_revision='7fd210692bb269ef52f7453bfeb2b0f0759b1d4c'
+expected_revision='43f5a6f069f6d0e6d075517b0c017784fe505b0d'
 expected_catalog_digest='19b951925b7c676f42b84d7880c0d9c5383289c48920de5cf2611dbe8d7cad36'
 mode="${1:---check}"
 
