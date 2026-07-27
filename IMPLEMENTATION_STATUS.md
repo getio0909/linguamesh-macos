@@ -4,6 +4,22 @@ Status: Milestone 3 partial checkpoint; source and macOS CI verified, release pe
 
 Global goal SHA-256: `11f9a65927aac7e57e2af119e9d21cc98e8d5a08b8a112a19ee1c47903e36198`
 
+## 2026-07-27 Hosted prerelease artifact checkpoint
+
+Assumption: the ad-hoc signed archive is packaging evidence only; distribution signing,
+notarization, device, accessibility, rollback, and stable-release gates remain open.
+
+- Commit `a8af9945c1c2b8080845e58e485c60df94ca1ccb` consumes Core
+  `cb061d24a3e0c4059a65d099d30bc643e9e079ea` and l10n
+  `43f5a6f069f6d0e6d075517b0c017784fe505b0d`.
+- Hosted Native run `30287237127` passed source/localization validation, Core XCFramework build,
+  generated wrapper tests, strict Swift build/tests, app assembly, ad-hoc signing, and artifact
+  staging. Foundation `30287237210` passed.
+- The uploaded `LinguaMesh-macos-prerelease-adhoc.zip` has SHA-256
+  `9d5bfd4c27ade6bbfb27a28f7958e6cb2dd91522f28a4ecb25a694d0ee5d92ce`; a clean download passed
+  `shasum -a 256` verification.
+- The archive is not notarized or distribution-signed; no stable-release claim is made.
+
 ## 2026-07-27 Central Linux-first prerelease pin alignment
 
 Assumption: the central prerelease compatibility train is the authoritative macOS CI input; the
