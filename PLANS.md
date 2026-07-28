@@ -4,6 +4,13 @@ Status: Active
 
 Authority: `GLOBAL_GOAL.md` and the sibling `linguamesh-project/PROJECT_GOAL.md`
 
+## 2026-07-27 Central project-spec pin refresh
+
+- [x] Advance the macOS workflow and source gate from stale central revision `b75d4d1` to
+  prerelease coordination revision `44068dd`.
+- [ ] Run the macOS Native and Foundation workflows on the pin-aligned branch, then merge only
+  after both pass; retain ad-hoc/notarization and device/manual boundaries.
+
 ## 2026-07-27 Central prerelease pin alignment
 
 - [x] Align the macOS workflow, source gate, and localization gate to Core
