@@ -4,7 +4,7 @@
 
 `tools/package-app.sh` assembles an unsigned prerelease app bundle from the Swift Package release executable and generated localization bundle. macOS Native CI run `29765371920` applies an ad-hoc signature solely to verify bundle structure, hardened-runtime options, and entitlements. No distribution-signed, notarized, stapled, DMG, or stable artifact exists.
 
-Before packaging, build the core XCFramework from source revision `141b6a4f0aae769ba5f854060f1160103d56cfc0` and run all commands in `docs/testing.md`. CI pins that immutable source revision; a release must use a verified immutable artifact and checksum from the central release manifest.
+Before packaging, build the core XCFramework from source revision `06813081669e36b6feec8a231cd9a53eaf643671` and run all commands in `docs/testing.md`. CI pins that immutable source revision; a release must use a verified immutable artifact and checksum from the central release manifest.
 
 ## Future release gate
 

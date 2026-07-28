@@ -39,7 +39,7 @@ jobs:
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
         with:
           repository: ${{ github.repository_owner }}/linguamesh-core
-          ref: 141b6a4f0aae769ba5f854060f1160103d56cfc0
+          ref: 06813081669e36b6feec8a231cd9a53eaf643671
           persist-credentials: false
           path: linguamesh-core
       - name: Check out localization source
