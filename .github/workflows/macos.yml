@@ -39,7 +39,7 @@ jobs:
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
         with:
           repository: ${{ github.repository_owner }}/linguamesh-core
-          ref: cb061d24a3e0c4059a65d099d30bc643e9e079ea
+          ref: 795773474bc89e023e72345b49a8f561138aa604
           persist-credentials: false
           path: linguamesh-core
       - name: Check out localization source
@@ -105,7 +105,7 @@ jobs:
           ditto -c -k --sequesterRsrc --keepParent \
             dist/LinguaMesh.app "$release_dir/LinguaMesh-macos-prerelease-adhoc.zip"
           printf '%s\n' \
-            'Core revision: cb061d24a3e0c4059a65d099d30bc643e9e079ea' \
+            'Core revision: 795773474bc89e023e72345b49a8f561138aa604' \
             'Localization revision: 43f5a6f069f6d0e6d075517b0c017784fe505b0d' \
             'Artifact status: prerelease; ad-hoc signed' > "$release_dir/BUILD-INFO.txt"
           (
