@@ -105,7 +105,7 @@ jobs:
           ditto -c -k --sequesterRsrc --keepParent \
             dist/LinguaMesh.app "$release_dir/LinguaMesh-macos-prerelease-adhoc.zip"
           printf '%s\n' \
-            'Core revision: 48a2d59e19611400499954384250f522e0fa6561' \
+            'Core revision: 06813081669e36b6feec8a231cd9a53eaf643671' \
             'Localization revision: 43f5a6f069f6d0e6d075517b0c017784fe505b0d' \
             'Artifact status: prerelease; ad-hoc signed' > "$release_dir/BUILD-INFO.txt"
           (
