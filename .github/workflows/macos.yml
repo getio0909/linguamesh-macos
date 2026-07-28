@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
         with:
           repository: ${{ github.repository_owner }}/linguamesh-project
-          ref: 44068ddd750282e9ffa69c9816b4361ac1858641
+          ref: cf0aa0adff35a188603587592edb5877b6e26d67
           persist-credentials: false
           path: linguamesh-project
       - name: Check out core
